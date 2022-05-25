@@ -3,21 +3,22 @@
         <title>我的全新 Hugo 网站</title>
         <link>http://example.org/</link>
         <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 25 May 2022 23:16:57 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>tttsongen@foxmail.com (songen)</managingEditor>
+            <webMaster>tttsongen@foxmail.com (songen)</webMaster><lastBuildDate>Wed, 25 May 2022 23:16:57 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>Second</title>
-    <link>http://example.org/posts/second/</link>
+    <title>CSS</title>
+    <link>http://example.org/posts/css/</link>
     <pubDate>Wed, 25 May 2022 23:16:57 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/second/</guid>
+    <guid>http://example.org/posts/css/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>My First Post</title>
     <link>http://example.org/posts/my-first-post/</link>
     <pubDate>Wed, 25 May 2022 21:46:22 &#43;0800</pubDate>
-    <author>xxxx</author>
+    <author>songen</author>
     <guid>http://example.org/posts/my-first-post/</guid>
     <description><![CDATA[LoveIt Theme | Hugo English README | 简体中文说明 LoveIt is a clean, elegant but advanced blog theme for Hugo. It is based on the original LeaveIt Theme and KeepIt Theme. Since the three themes have a similar look, if you have questions about their differences, read Why choose LoveIt so that you can choose the one that works best for you. Demo Site To see]]></description>
 </item>
