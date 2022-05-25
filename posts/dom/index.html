@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>DOM - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="DOM" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/dom/" />
+<meta property="article:published_time" content="2022-05-26T00:38:02+08:00" />
+<meta property="article:modified_time" content="2022-05-26T00:38:02+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DOM"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/dom/" /><link rel="prev" href="http://example.org/posts/javascript-array/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "DOM",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/dom\/"
+        },"genre": "posts","wordcount":  544 ,
+        "url": "http:\/\/example.org\/posts\/dom\/","datePublished": "2022-05-26T00:38:02+08:00","dateModified": "2022-05-26T00:38:02+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "songen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">DOM</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>songen</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;544 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#获取元素api">获取元素API：</a></li>
+        <li><a href="#创建一个文本">创建一个文本</a></li>
+        <li><a href="#删除一个元素">删除一个元素</a></li>
+        <li><a href="#改属性">改属性</a></li>
+        <li><a href="#查父节点">查父节点</a></li>
+        <li><a href="#遍历div里的每一个元素">遍历div里的每一个元素</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="获取元素api">获取元素API：</h3>
+<p><code>window.idxxx</code>
+<code>document.queryselector('#id')</code>
+<code>document.queryselectorAll('#id')[0]</code>
+<code>document.getElementById('idxxx')</code>
+<code>document.getElementsByTagName('div')[0]</code>
+<code>document.getElementsByClassName('red')[0]</code></p>
+<h4 id="获取html元素">获取html元素</h4>
+<p><code>document.documentElement</code></p>
+<h4 id="获取head元素">获取head元素</h4>
+<p><code>document.head</code></p>
+<h4 id="获取body元素">获取body元素</h4>
+<p><code>document.body</code></p>
+<h4 id="获取所有元素">获取所有元素</h4>
+<p><code>document.all(falsy值)</code></p>
+<h4 id="创建一个标签节点">创建一个标签节点</h4>
+<p><code>let div1 = document.createElement('div')</code>
+<code>document.createElement('style')</code></p>
+<h3 id="创建一个文本">创建一个文本</h3>
+<p><code>let text1 = document.createTextNode('你好')</code></p>
+<h4 id="标签插入文本">标签插入文本</h4>
+<p><code>div1.appendChild(text1)</code>
+<code>div1.innerText = '你好' div.textContent = '你好'</code>
+JS创建的节点 需要加入head或者body中才可以
+<code>document.body.appendChild(div)</code>
+<code>页面</code>中的元素.appendChild(div)`</p>
+<h3 id="删除一个元素">删除一个元素</h3>
+<p><code>parentNode.childChild(childNode)</code>
+<code>childNode.remove()</code></p>
+<h3 id="改属性">改属性</h3>
+<p><code>改class：div.className = 'red blue'</code>
+<code>改class：div.classList.add('red')</code>
+<code>改style：div.style = 'width = 10px; color = blue;'</code>
+<code>改style部分：div.style.width = '50px'</code>
+<code>大小写：div.style.backgroundColor = 'white'</code>
+<code>改data-* 属性：div.dataset.x = 'haha'</code></p>
+<h4 id="添加事件函数">添加事件函数</h4>
+<p><code>div.addEventListener</code></p>
+<h4 id="改内容">改内容</h4>
+<p><code>div.innerText = 'xxx'</code>
+<code>div.innerContent = 'xxx'</code>
+<code>div.innerHTML = &lt;strong&gt;内容&lt;/strong&gt;</code></p>
+<h3 id="查父节点">查父节点</h3>
+<p><code>node.parentNode / node.parentElement</code></p>
+<h4 id="查爷节点">查爷节点</h4>
+<p><code>node.parentNode.parentNode</code></p>
+<h4 id="查子节点">查子节点</h4>
+<p><code>node.childNodes / node.children</code></p>
+<h4 id="查兄弟节点">查兄弟节点</h4>
+<p><code>node.parentNode.childNodes(排除自己)</code>
+<code>node.parentNode.children(排除自己)</code></p>
+<h4 id="查老大">查老大</h4>
+<p><code>node.firstChild</code></p>
+<h4 id="查最小">查最小</h4>
+<p>`node.lastChild``</p>
+<h4 id="查上一个兄弟">查上一个兄弟</h4>
+<p><code>node.previousSibling</code></p>
+<h4 id="查下一兄弟">查下一兄弟</h4>
+<p><code>node.nextSibling</code></p>
+<h3 id="遍历div里的每一个元素">遍历div里的每一个元素</h3>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="nx">travel</span> <span class="o">=</span> <span class="p">(</span><span class="nx">node</span><span class="p">,</span><span class="nx">fn</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+	<span class="nx">fn</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">children</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+ 				<span class="nx">travel</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="nx">fn</span><span class="p">)</span>
+		<span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">travel</span><span class="p">(</span><span class="nx">div1</span><span class="p">,</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span><span class="o">=&gt;</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">node</span><span class="p">))</span>
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/dom/" data-title="DOM" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/dom/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/dom/" data-title="DOM"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/dom/" data-title="DOM"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/dom/" data-title="DOM"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/javascript-array/" class="prev" rel="prev" title="JavaScript Array"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>JavaScript Array</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">songen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

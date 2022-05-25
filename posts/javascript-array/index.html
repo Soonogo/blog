@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>JavaScript Array - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="JavaScript Array" />
+<meta property="og:description" content="数组的原型： 数组是一种特殊的JavaScript对象，是用js对象模拟的。 数组是由key、value和length组成的 下标从0开始，都是以" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/javascript-array/" />
+<meta property="article:published_time" content="2022-05-26T00:24:42+08:00" />
+<meta property="article:modified_time" content="2022-05-26T00:24:42+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JavaScript Array"/>
+<meta name="twitter:description" content="数组的原型： 数组是一种特殊的JavaScript对象，是用js对象模拟的。 数组是由key、value和length组成的 下标从0开始，都是以"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/javascript-array/" /><link rel="prev" href="http://example.org/posts/javascript-object/" /><link rel="next" href="http://example.org/posts/dom/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "JavaScript Array",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/javascript-array\/"
+        },"genre": "posts","wordcount":  578 ,
+        "url": "http:\/\/example.org\/posts\/javascript-array\/","datePublished": "2022-05-26T00:24:42+08:00","dateModified": "2022-05-26T00:24:42+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "songen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">JavaScript Array</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>songen</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;578 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#数组是一种特殊的javascript对象是用js对象模拟的">数组是一种特殊的<code>JavaScript</code>对象，是用js对象模拟的。</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#删除数组元素">删除数组元素</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#遍历数组">遍历数组</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/04/15/u5hDscNdl6JGHKq.jpg"
+        data-srcset="https://s2.loli.net/2022/04/15/u5hDscNdl6JGHKq.jpg, https://s2.loli.net/2022/04/15/u5hDscNdl6JGHKq.jpg 1.5x, https://s2.loli.net/2022/04/15/u5hDscNdl6JGHKq.jpg 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/04/15/u5hDscNdl6JGHKq.jpg"
+        title="1.jpeg" /></p>
+<h1 id="数组的原型">数组的原型：</h1>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/fRxFQ5hABGHWUZp.png"
+        data-srcset="https://s2.loli.net/2022/05/26/fRxFQ5hABGHWUZp.png, https://s2.loli.net/2022/05/26/fRxFQ5hABGHWUZp.png 1.5x, https://s2.loli.net/2022/05/26/fRxFQ5hABGHWUZp.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/fRxFQ5hABGHWUZp.png"
+        title="image.png" /></p>
+<h2 id="数组是一种特殊的javascript对象是用js对象模拟的">数组是一种特殊的<code>JavaScript</code>对象，是用js对象模拟的。</h2>
+<p>数组是由<code>key</code>、<code>value</code>和<code>length</code>组成的</p>
+<h1 id="imagepnghttpss2lolinet20220526xd12a8jzf7toe9ppng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/XD12a8jZF7TOe9P.png"
+        data-srcset="https://s2.loli.net/2022/05/26/XD12a8jZF7TOe9P.png, https://s2.loli.net/2022/05/26/XD12a8jZF7TOe9P.png 1.5x, https://s2.loli.net/2022/05/26/XD12a8jZF7TOe9P.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/XD12a8jZF7TOe9P.png"
+        title="image.png" /></h1>
+<p>下标从0开始，都是以字符串的形式存储。</p>
+<h1 id="imagepnghttpss2lolinet20220526k7nboixguyeqq4npng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/k7nbOiXgUYEqQ4N.png"
+        data-srcset="https://s2.loli.net/2022/05/26/k7nbOiXgUYEqQ4N.png, https://s2.loli.net/2022/05/26/k7nbOiXgUYEqQ4N.png 1.5x, https://s2.loli.net/2022/05/26/k7nbOiXgUYEqQ4N.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/k7nbOiXgUYEqQ4N.png"
+        title="image.png" /></h1>
+<ul>
+<li>改变原数组的操作:<code>pop / push / shift / unshift / splice / reverse / sort</code></li>
+<li>不改变原数组并返回新数组的操作:<code>concat / filter / join / slice / reduce / findIndex / forEach / map</code></li>
+</ul>
+<h4 id="splice是切断数组返回一个新数组入股splice0就相当于复制一个数组"><code>splice</code>是切断数组返回一个新数组，入股<code>splice(0)</code>就相当于复制一个数组</h4>
+<h1 id="imagepnghttpss2lolinet20220526ipomtqvk5p4827lpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/iPOmTQVK5p4827L.png"
+        data-srcset="https://s2.loli.net/2022/05/26/iPOmTQVK5p4827L.png, https://s2.loli.net/2022/05/26/iPOmTQVK5p4827L.png 1.5x, https://s2.loli.net/2022/05/26/iPOmTQVK5p4827L.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/iPOmTQVK5p4827L.png"
+        title="image.png" /></h1>
+<h4 id="arrayfrom可以把一个伪数组变成数组"><code>Array.from</code>可以把一个伪数组变成数组</h4>
+<h1 id="imagepnghttpss2lolinet20220526r6dzk2fft4hrznapng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/r6dZK2Fft4HRzNA.png"
+        data-srcset="https://s2.loli.net/2022/05/26/r6dZK2Fft4HRzNA.png, https://s2.loli.net/2022/05/26/r6dZK2Fft4HRzNA.png 1.5x, https://s2.loli.net/2022/05/26/r6dZK2Fft4HRzNA.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/r6dZK2Fft4HRzNA.png"
+        title="image.png" /></h1>
+<h3 id="删除数组元素">删除数组元素</h3>
+<p><code>delete arr2[&quot;1&quot;]</code></p>
+<h1 id="imagepnghttpss2lolinet20220526v5sp1trdcgeqemppng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/V5Sp1TrdCGEQemP.png"
+        data-srcset="https://s2.loli.net/2022/05/26/V5Sp1TrdCGEQemP.png, https://s2.loli.net/2022/05/26/V5Sp1TrdCGEQemP.png 1.5x, https://s2.loli.net/2022/05/26/V5Sp1TrdCGEQemP.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/V5Sp1TrdCGEQemP.png"
+        title="image.png" /></h1>
+<p>但是修改<code>length</code>会直接删除多余的元素
+正常删除使用<code>pop</code>，<code>shift</code>，<code>splice</code>
+<code>arr2.splice(index,1)</code>//从index开始删，删1个
+<code>arr2.splice(index,1,'x')</code>//并在删除的位置添加&rsquo;x'
+<code>arr2.splice(index,1,'x','y')</code>//并在删除的位置添加&rsquo;x',&lsquo;y&rsquo;</p>
+<h3 id="遍历数组">遍历数组</h3>
+<p><code>forEach(value,index)</code>
+<code>forEach</code>接受一个数组，第一个参数为<code>value</code>，第二个参数为<code>index</code>，第三个参数为数组本身</p>
+<h1 id="imagepnghttpss2lolinet20220526l3q5t1pdihncy7spng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/l3q5T1PdIHnCY7s.png"
+        data-srcset="https://s2.loli.net/2022/05/26/l3q5T1PdIHnCY7s.png, https://s2.loli.net/2022/05/26/l3q5T1PdIHnCY7s.png 1.5x, https://s2.loli.net/2022/05/26/l3q5T1PdIHnCY7s.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/l3q5T1PdIHnCY7s.png"
+        title="image.png" /></h1>
+<h1 id="imagepnghttpss2lolinet20220526bqilxnyeapjrcvrpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/BqilXNyeAPJrcvR.png"
+        data-srcset="https://s2.loli.net/2022/05/26/BqilXNyeAPJrcvR.png, https://s2.loli.net/2022/05/26/BqilXNyeAPJrcvR.png 1.5x, https://s2.loli.net/2022/05/26/BqilXNyeAPJrcvR.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/BqilXNyeAPJrcvR.png"
+        title="image.png" /></h1>
+<p><code>indexOf </code>返回数组符合要求的第一个数的下标，没有返回-1
+<code>find</code>找到想要的数返回符合要求的第一个数，接受一个函数
+<code>map</code>遍历数组进行操作
+<code>filter</code>过滤数组操作
+<code>reduce</code>对数组进行复杂操作，第二个参数是初始值<code>array.reduce((a,b)=&gt;{a+b},0)</code></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/javascript-array/" data-title="JavaScript Array" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/javascript-array/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/javascript-array/" data-title="JavaScript Array"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/javascript-array/" data-title="JavaScript Array"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/javascript-array/" data-title="JavaScript Array"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/javascript-object/" class="prev" rel="prev" title="JavaScript Object"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>JavaScript Object</a>
+            <a href="/posts/dom/" class="next" rel="next" title="DOM">DOM<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">songen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -4,9 +4,57 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>tttsongen@foxmail.com (songen)</managingEditor>
-            <webMaster>tttsongen@foxmail.com (songen)</webMaster><lastBuildDate>Wed, 25 May 2022 23:16:57 &#43;0800</lastBuildDate>
+            <webMaster>tttsongen@foxmail.com (songen)</webMaster><lastBuildDate>Thu, 26 May 2022 00:38:02 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>DOM</title>
+    <link>http://example.org/posts/dom/</link>
+    <pubDate>Thu, 26 May 2022 00:38:02 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/dom/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>JavaScript Array</title>
+    <link>http://example.org/posts/javascript-array/</link>
+    <pubDate>Thu, 26 May 2022 00:24:42 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/javascript-array/</guid>
+    <description><![CDATA[数组的原型： 数组是一种特殊的JavaScript对象，是用js对象模拟的。 数组是由key、value和length组成的 下标从0开始，都是以]]></description>
+</item>
+<item>
+    <title>JavaScript Object</title>
+    <link>http://example.org/posts/javascript-object/</link>
+    <pubDate>Thu, 26 May 2022 00:14:18 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/javascript-object/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>JavaScript Star</title>
+    <link>http://example.org/posts/javascript-star/</link>
+    <pubDate>Wed, 25 May 2022 23:57:09 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/javascript-star/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>JavaScript</title>
+    <link>http://example.org/posts/javascript/</link>
+    <pubDate>Wed, 25 May 2022 23:55:48 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/javascript/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>URL</title>
+    <link>http://example.org/posts/url/</link>
+    <pubDate>Wed, 25 May 2022 23:52:34 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/url/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>CSS</title>
     <link>http://example.org/posts/css/</link>
     <pubDate>Wed, 25 May 2022 23:16:57 &#43;0800</pubDate>
