@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>TypeScript - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="TypeScript" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/typescript/" />
+<meta property="article:published_time" content="2022-05-26T01:10:39+08:00" />
+<meta property="article:modified_time" content="2022-05-26T01:10:39+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TypeScript"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/typescript/" /><link rel="prev" href="http://example.org/posts/vue3.2/" /><link rel="next" href="http://example.org/posts/react/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "TypeScript",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/typescript\/"
+        },"genre": "posts","wordcount":  628 ,
+        "url": "http:\/\/example.org\/posts\/typescript\/","datePublished": "2022-05-26T01:10:39+08:00","dateModified": "2022-05-26T01:10:39+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "songen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">TypeScript</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>songen</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;628 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#typescript--type--javascript">TypeScript = Type + JavaScript</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#联合类型和交叉类型">联合类型'|&lsquo;和交叉类型&rsquo;&amp;'</a></li>
+        <li><a href="#泛型">泛型</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#重载">重载</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="typescript--type--javascript">TypeScript = Type + JavaScript</h3>
+<p>是一种由微软开发的自由和开源的编程语言。它是 JavaScript 的一个超集，为普通的js文件加上类型检测，在静态文件当中编写时发现问题并解决。</p>
+<h1 id="imagepnghttpss2lolinet202205267po4za6ncjgfo5apng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/7Po4Za6ncJGfO5A.png"
+        data-srcset="https://s2.loli.net/2022/05/26/7Po4Za6ncJGfO5A.png, https://s2.loli.net/2022/05/26/7Po4Za6ncJGfO5A.png 1.5x, https://s2.loli.net/2022/05/26/7Po4Za6ncJGfO5A.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/7Po4Za6ncJGfO5A.png"
+        title="image.png" /></h1>
+<p><a href="https://www.typescriptlang.org/play" target="_blank" rel="noopener noreffer">TS Playground</a></p>
+<h4 id="他包含了js的基本类型numberstringnullundefinedbigintsymbolbooleanobject">他包含了js的基本类型：number，string，null，undefined，bigint，symbol，boolean，object</h4>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">a</span><span class="o">:</span><span class="nx">number</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kr">const</span> <span class="nx">b</span><span class="o">:</span><span class="nx">string</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+<span class="kr">const</span> <span class="nx">c</span><span class="o">:</span><span class="kc">null</span> <span class="o">=</span> <span class="kc">null</span>
+<span class="kr">const</span> <span class="nx">d</span><span class="o">:</span><span class="kc">undefined</span> <span class="o">=</span> <span class="kc">undefined</span>
+<span class="kr">const</span> <span class="nx">e</span><span class="o">:</span><span class="nx">bigint</span> <span class="o">=</span> <span class="mi">123456</span><span class="nx">n</span>
+<span class="kr">const</span> <span class="nx">f</span><span class="o">:</span><span class="nx">symbol</span> <span class="o">=</span> <span class="nx">symbol</span><span class="p">(</span><span class="s1">&#39;hallo&#39;</span><span class="p">)</span>
+<span class="kr">const</span> <span class="nx">g</span><span class="o">:</span><span class="kr">boolean</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="kr">const</span> <span class="nx">x</span><span class="o">:</span><span class="nx">object</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">// 
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">x</span><span class="o">:</span><span class="nb">Array</span><span class="o">&lt;</span><span class="nx">number</span> <span class="o">|</span> <span class="nx">string</span> <span class="o">|</span> <span class="kr">boolean</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="kc">false</span><span class="p">]</span> <span class="c1">//泛型
+</span><span class="c1"></span>
+<span class="c1">//函数
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="nx">number</span><span class="p">,</span><span class="nx">b</span><span class="o">:</span><span class="nx">number</span><span class="p">)</span><span class="o">:</span><span class="nx">number</span> <span class="p">=&gt;</span> <span class="nx">a</span><span class="o">+</span><span class="nx">b</span>
+<span class="kr">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="nx">number</span><span class="p">,</span><span class="nx">b</span><span class="o">:</span><span class="nx">number</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">number</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">}</span>
+
+<span class="c1">//type声明
+</span><span class="c1"></span><span class="nx">type</span> <span class="nx">ADD</span> <span class="o">=</span> <span class="p">{(</span><span class="nx">a</span><span class="o">:</span><span class="nx">number</span><span class="p">,</span><span class="nx">b</span><span class="o">:</span><span class="nx">number</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">number</span><span class="p">}</span>
+<span class="kr">const</span> <span class="nx">add</span><span class="o">:</span><span class="nx">Add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">}</span>
+
+<span class="c1">//interface 声明 使函数有多个属性
+</span><span class="c1"></span><span class="kr">interface</span> <span class="nx">AddWithProps</span><span class="p">{</span>
+  <span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="nx">number</span><span class="p">,</span><span class="nx">b</span><span class="o">:</span><span class="nx">number</span><span class="p">)</span><span class="o">:</span><span class="nx">number</span>
+  <span class="nx">xxx</span><span class="o">:</span><span class="nx">string</span>
+<span class="p">}</span>
+<span class="kr">const</span> <span class="nx">add</span><span class="o">:</span><span class="nx">AddWithProps</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
+<span class="nx">add</span><span class="p">.</span><span class="nx">xxx</span> <span class="o">=</span> <span class="s1">&#39;123&#39;</span>
+</code></pre></div><h4 id="还额外有一些ts额定类型anyunknowvoidnevertupleenum">还额外有一些TS额定类型：any，unknow，void，never，tuple，enum</h4>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//never
+</span><span class="c1"></span><span class="nx">type</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">&amp;</span> <span class="nx">stringl</span>
+<span class="kd">let</span> <span class="nx">b</span><span class="o">:</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">123</span>
+
+<span class="c1">//unknow
+</span><span class="c1"></span><span class="nx">type</span> <span class="nx">C</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="nx">string</span><span class="p">}</span>
+<span class="kd">let</span> <span class="nx">a</span><span class="o">:</span><span class="nx">unknow</span> <span class="o">=</span> <span class="c1">//JSON.parse(&#39;{&#34;name&#34;:&#34;Jerry&#34;,&#34;age&#34;,:&#34;18&#34;}&#39;)
+</span><span class="c1"></span><span class="p">(</span><span class="nx">a</span> <span class="nx">as</span> <span class="nx">C</span><span class="p">).</span><span class="nx">name</span> 
+<span class="c1">//使用前不知道类型
+</span><span class="c1"></span>
+<span class="c1">//void 一般指函数返回一个空
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">print</span><span class="o">:</span><span class="p">()</span> <span class="p">=&gt;</span> <span class="k">void</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;hallo&#39;</span><span class="p">)}</span>
+
+<span class="c1">//断言
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">p</span><span class="o">:</span><span class="nx">string</span> <span class="o">=</span> <span class="s1">&#39;123&#39;</span>
+<span class="p">(</span><span class="nx">p</span> <span class="nx">as</span> <span class="nx">any</span><span class="p">).</span><span class="nx">push</span><span class="p">(</span><span class="mi">456</span><span class="p">)</span>
+
+<span class="c1">//元组tuple
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">p</span><span class="o">:</span><span class="p">[</span><span class="nx">number</span><span class="p">,</span><span class="nx">number</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">]</span>
+<span class="p">(</span><span class="nx">p</span> <span class="nx">as</span> <span class="nx">any</span><span class="p">).</span><span class="nx">push</span><span class="p">(</span><span class="mi">456</span><span class="p">)</span>
+
+<span class="c1">//枚举enum
+</span><span class="c1"></span><span class="kr">enum</span> <span class="nx">Color</span> <span class="p">{</span><span class="nx">Red</span><span class="p">,</span> <span class="nx">Green</span><span class="p">,</span> <span class="nx">Blue</span><span class="p">}</span>
+<span class="kd">let</span> <span class="nx">c</span><span class="o">:</span> <span class="nx">Color</span> <span class="o">=</span> <span class="nx">Color</span><span class="p">.</span><span class="nx">Green</span><span class="p">;</span> <span class="c1">//1
+</span><span class="c1">//按下标输出
+</span></code></pre></div><p><code>npm install typescript --save-dev</code>
+//
+<code>yarn add --dev typescript </code>
+//
+<code>pnpm i -g typescript</code></p>
+<p>第三方库的.d.ts文件可以快速查找函数的接受类型，还有很好的代码提示功能</p>
+<h3 id="联合类型和交叉类型">联合类型'|&lsquo;和交叉类型&rsquo;&amp;'</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//联合类型
+</span><span class="c1"></span><span class="nx">type</span> <span class="nx">A</span> <span class="o">=</span><span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span><span class="nx">string</span><span class="p">;</span>
+  <span class="nx">age</span><span class="o">:</span><span class="nx">number</span>
+<span class="p">}</span>
+<span class="nx">type</span> <span class="nx">B</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span><span class="nx">string</span><span class="p">;</span>
+  <span class="nx">gender</span><span class="o">:</span><span class="nx">string</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">:</span> <span class="nx">A</span> <span class="o">|</span> <span class="nx">B</span><span class="p">)=&gt;{</span>
+  <span class="k">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span> <span class="o">===</span> <span class="s1">&#39;number&#39;</span><span class="p">){</span>
+    <span class="nx">x</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">()</span>
+  <span class="p">}</span><span class="k">else</span><span class="p">{}</span>
+<span class="p">}</span>
+
+
+<span class="c1">//交叉类型
+</span><span class="c1"></span><span class="nx">type</span> <span class="nx">A</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="nx">string</span><span class="p">}</span> <span class="o">&amp;</span> <span class="p">{</span><span class="nx">age</span><span class="o">:</span><span class="nx">number</span><span class="p">}</span> <span class="c1">//用于交叉复杂类型
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">a</span><span class="o">:</span><span class="nx">A</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;jack&#39;</span><span class="p">,</span>
+  <span class="nx">age</span><span class="o">:</span><span class="mi">23</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="泛型">泛型</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//广泛的类型
+</span><span class="c1"></span><span class="nx">type</span> <span class="nx">A</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nx">T</span> <span class="o">|</span> <span class="nx">T</span><span class="p">[]</span>
+<span class="nx">type</span> <span class="nx">A</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="nx">T</span><span class="p">,</span><span class="nx">b</span><span class="o">:</span><span class="nx">T</span><span class="p">)</span> <span class="p">=&gt;</span><span class="nx">T</span>
+
+<span class="kr">const</span> <span class="nx">ADD</span><span class="o">:</span><span class="nx">A</span><span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> 
+<span class="kr">const</span> <span class="nx">ADD</span><span class="o">:</span><span class="nx">A</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)=&gt;</span><span class="nx">a</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nx">b</span>
+
+</code></pre></div><h4 id="react-的-functioncomponent泛型">React 的 FunctionComponent泛型</h4>
+<h1 id="imagepnghttpss2lolinet20220526pyd32xkimsqw9vzpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/PYd32xkimSQW9vZ.png"
+        data-srcset="https://s2.loli.net/2022/05/26/PYd32xkimSQW9vZ.png, https://s2.loli.net/2022/05/26/PYd32xkimSQW9vZ.png 1.5x, https://s2.loli.net/2022/05/26/PYd32xkimSQW9vZ.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/PYd32xkimSQW9vZ.png"
+        title="image.png" /></h1>
+<h1 id="imagepnghttpss2lolinet202205266lciactpmolx3k5png"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/6lCiacTPMoLx3k5.png"
+        data-srcset="https://s2.loli.net/2022/05/26/6lCiacTPMoLx3k5.png, https://s2.loli.net/2022/05/26/6lCiacTPMoLx3k5.png 1.5x, https://s2.loli.net/2022/05/26/6lCiacTPMoLx3k5.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/6lCiacTPMoLx3k5.png"
+        title="image.png" /></h1>
+<h3 id="重载">重载</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">SUM</span> <span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="nx">number</span><span class="p">,</span><span class="nx">b</span><span class="o">:</span><span class="nx">number</span><span class="p">)</span><span class="o">:</span><span class="nx">number</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">SUM</span> <span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="nx">string</span><span class="p">,</span><span class="nx">b</span><span class="o">:</span><span class="nx">string</span><span class="p">)</span><span class="o">:</span><span class="nx">string</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">SUM</span> <span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="nx">any</span> <span class="p">,</span> <span class="nx">b</span><span class="o">:</span><span class="nx">any</span><span class="p">)</span><span class="o">:</span><span class="nx">any</span> <span class="p">{</span>
+  <span class="c1">//两种判断方式
+</span><span class="c1"></span>  <span class="c1">//if(arguments.length===1)
+</span><span class="c1"></span>  <span class="c1">//if(typeof a === &#39;number&#39;)
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h1 id="imagepnghttpss2lolinet20220526znggdixfeubsybupng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/ZngGDIxfEuBSYbU.png"
+        data-srcset="https://s2.loli.net/2022/05/26/ZngGDIxfEuBSYbU.png, https://s2.loli.net/2022/05/26/ZngGDIxfEuBSYbU.png 1.5x, https://s2.loli.net/2022/05/26/ZngGDIxfEuBSYbU.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/ZngGDIxfEuBSYbU.png"
+        title="image.png" /></h1></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/typescript/" data-title="TypeScript" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/typescript/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/typescript/" data-title="TypeScript"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/typescript/" data-title="TypeScript"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/typescript/" data-title="TypeScript"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/vue3.2/" class="prev" rel="prev" title="Vue3.2"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Vue3.2</a>
+            <a href="/posts/react/" class="next" rel="next" title="React">React<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">songen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

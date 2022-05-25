@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>React Hooks - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="React Hooks" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/react-hooks/" />
+<meta property="article:published_time" content="2022-05-26T01:23:57+08:00" />
+<meta property="article:modified_time" content="2022-05-26T01:23:57+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React Hooks"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/react-hooks/" /><link rel="prev" href="http://example.org/posts/react/" /><link rel="next" href="http://example.org/posts/vite-pnpm/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "React Hooks",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/react-hooks\/"
+        },"genre": "posts","wordcount":  1509 ,
+        "url": "http:\/\/example.org\/posts\/react-hooks\/","datePublished": "2022-05-26T01:23:57+08:00","dateModified": "2022-05-26T01:23:57+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "songen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">React Hooks</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>songen</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1509 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#usestate">useState</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#useeffect">useEffect</a></li>
+    <li><a href="#useref">useRef</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#forwardref">forwardRef</a></li>
+      </ul>
+    </li>
+    <li><a href="#usecontext">useContext</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#usereducer">useReducer</a>
+      <ul>
+        <li><a href="#用来代替redux">用来代替Redux</a></li>
+      </ul>
+    </li>
+    <li><a href="#usememo">useMemo</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="usestate">useState</h2>
+<p>不会改变原有值，每回返回一个新的数组，第一个参数读，第二个参数写（是一个函数）</p>
+<h1 id="imagepnghttpss2lolinet20220526jhtdus3zukklveppng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/JhtdUS3ZuKklvep.png"
+        data-srcset="https://s2.loli.net/2022/05/26/JhtdUS3ZuKklvep.png, https://s2.loli.net/2022/05/26/JhtdUS3ZuKklvep.png 1.5x, https://s2.loli.net/2022/05/26/JhtdUS3ZuKklvep.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/JhtdUS3ZuKklvep.png"
+        title="image.png" /></h1>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">Example</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// 声明一个新的叫做 “count” 的 state 变量
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setCount</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">You</span> <span class="nx">clicked</span> <span class="p">{</span><span class="nx">count</span><span class="p">}</span> <span class="nx">times</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">setCount</span><span class="p">(</span><span class="nx">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)}</span><span class="o">&gt;</span>
+        <span class="nx">Click</span> <span class="nx">me</span>
+      <span class="o">&lt;</span><span class="err">/button&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="useeffect">useEffect</h2>
+<p>接受一个函数和一个数组，数组如果不写就是每回调用，<code>[]</code>等于第一次调用
+<code>[]</code>里是哪个参数就在哪个参数变化时调用
+在函数里面<code>return</code>一个新数组等于消亡时调用</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">Example</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setCount</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+  <span class="c1">// Similar to componentDidMount and componentDidUpdate:
+</span><span class="c1"></span> 
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Update the document title using the browser API
+</span><span class="c1"></span>    <span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="sb">`You clicked </span><span class="si">${</span><span class="nx">count</span><span class="si">}</span><span class="sb"> times`</span><span class="p">;</span>
+  <span class="p">});</span>
+
+   <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Update the document title using the browser API
+</span><span class="c1"></span>    <span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="sb">`You clicked </span><span class="si">${</span><span class="nx">count</span><span class="si">}</span><span class="sb"> times`</span><span class="p">;</span>
+  <span class="p">},[</span><span class="nx">count</span><span class="p">]);</span>
+  
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">You</span> <span class="nx">clicked</span> <span class="p">{</span><span class="nx">count</span><span class="p">}</span> <span class="nx">times</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">setCount</span><span class="p">(</span><span class="nx">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)}</span><span class="o">&gt;</span>
+        <span class="nx">Click</span> <span class="nx">me</span>
+      <span class="o">&lt;</span><span class="err">/button&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="useref">useRef</h2>
+<p>useRef是一个对象里面只有一个current值</p>
+<h1 id="imagepnghttpss2lolinet20220526esrdmlyaf1qocjbpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/ESRDMlyaF1QOCjb.png"
+        data-srcset="https://s2.loli.net/2022/05/26/ESRDMlyaF1QOCjb.png, https://s2.loli.net/2022/05/26/ESRDMlyaF1QOCjb.png 1.5x, https://s2.loli.net/2022/05/26/ESRDMlyaF1QOCjb.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/ESRDMlyaF1QOCjb.png"
+        title="image.png" /></h1>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">对一个div的引用</span>
+<span class="kr">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+
+<span class="nx">container</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
+
+ <span class="k">return</span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">container</span><span class="p">}</span> <span class="o">&gt;</span><span class="nx">hi</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">)</span>
+</code></pre></div><h3 id="forwardref">forwardRef</h3>
+<p>组件里传递<code>props</code>是无法传递<code>ref</code>的，可以用<code>forwardRef</code>把组件包裹起来，箭头函数的参数传入<code>ref</code>即可</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">buttonRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;App&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Button2</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">buttonRef</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">按钮</span><span class="o">&lt;</span><span class="err">/Button2&gt;</span>
+      <span class="p">{</span><span class="cm">/* 看浏览器控制台的报错 */</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//const Button2 = props =&gt; {
+</span><span class="c1">//  return &lt;button className=&#34;red&#34; {...props} /&gt;;
+</span><span class="c1">//};
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">Button2</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">,</span> <span class="nx">ref</span><span class="p">)</span> <span class="p">=&gt;{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">ClassName</span><span class="o">=</span><span class="s2">&#34;red&#34;</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">ref</span><span class="p">}</span> <span class="p">{...</span><span class="nx">props</span><span class="p">}</span><span class="o">/&gt;</span>
+<span class="p">}</span>
+<span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">forwardRef</span><span class="p">(</span><span class="nx">Button2</span><span class="p">)</span>
+</code></pre></div><h2 id="usecontext">useContext</h2>
+<p>相当于一个局部的全局变量<a href="https://stackblitz.com/edit/react-ts-gxwroa?file=index.tsx,style.css,package.json" target="_blank" rel="noopener noreffer">链接</a></p>
+<h1 id="imagepnghttpss2lolinet20220526tksxubcdsc1hgebpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/tkSxUbCDsc1HgeB.png"
+        data-srcset="https://s2.loli.net/2022/05/26/tkSxUbCDsc1HgeB.png, https://s2.loli.net/2022/05/26/tkSxUbCDsc1HgeB.png 1.5x, https://s2.loli.net/2022/05/26/tkSxUbCDsc1HgeB.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/tkSxUbCDsc1HgeB.png"
+        title="image.png" /></h1>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//const MyContext = React.createContext(defaultValue);
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createContext</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+
+<span class="kr">const</span> <span class="p">[</span><span class="nx">theme</span><span class="p">,</span><span class="nx">setTheme</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&#34;red&#34;</span><span class="p">)</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">(){</span>
+  <span class="o">&lt;</span><span class="nx">x</span><span class="p">.</span><span class="nx">provider</span> <span class="nx">value</span><span class="o">=</span><span class="p">{{</span><span class="nx">theme</span><span class="p">,</span><span class="nx">setTheme</span><span class="p">}}</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Child</span><span class="o">&gt;</span>
+    <span class="p">...</span>
+  <span class="o">&lt;</span><span class="err">/x.provider&gt;</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">Child</span><span class="p">(){</span>
+  <span class="kr">const</span> <span class="p">{</span><span class="nx">setTheme</span><span class="p">}</span> <span class="o">=</span> <span class="nx">useContext</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+  <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="p">(()=&gt;{</span><span class="nx">setTheme</span><span class="p">(</span><span class="s2">&#34;blue&#34;</span><span class="p">)})</span><span class="o">&gt;</span><span class="nx">color</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<span class="p">}</span>
+
+<span class="o">&lt;</span><span class="nx">MyContext</span><span class="p">.</span><span class="nx">Provider</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="cm">/* 某个值 */</span><span class="p">}</span><span class="o">&gt;</span>
+</code></pre></div><p>每个 Context 对象都会返回一个 Provider React 组件，它允许消费组件订阅 context 的变化。
+<code>Provider</code> 接收一个 <code>value</code> 属性，传递给消费组件。一个 Provider 可以和多个消费组件有对应关系。多个 Provider 也可以嵌套使用，里层的会覆盖外层的数据。
+当 <code>Provider</code> 的 <code>value</code> 值发生变化时，它内部的所有消费组件都会重新渲染。从 Provider 到其内部 consumer 组件（包括 <a href="https://zh-hans.reactjs.org/docs/context.html#classcontexttype" target="_blank" rel="noopener noreffer">.contextType</a> 和 <a href="https://zh-hans.reactjs.org/docs/hooks-reference.html#usecontext" target="_blank" rel="noopener noreffer">useContext</a>）的传播不受制于 shouldComponentUpdate 函数，因此当 consumer 组件在其祖先组件跳过更新的情况下也能更新。</p>
+<h2 id="usereducer">useReducer</h2>
+<p>先创建初始值init
+创建所有操作reducer(state,action)
+传给useReducer，得到读和写接口
+调用 写 ({type:操作类型})</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">initial</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">n</span><span class="o">:</span> <span class="mi">0</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">reducer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;add&#34;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="nx">n</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">n</span> <span class="o">+</span> <span class="nx">action</span><span class="p">.</span><span class="nx">number</span> <span class="p">};</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&#34;multi&#34;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="nx">n</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">n</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">};</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;unknown type&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">state</span><span class="p">,</span> <span class="nx">dispatch</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useReducer</span><span class="p">(</span><span class="nx">reducer</span><span class="p">,</span> <span class="nx">initial</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="p">{</span> <span class="nx">n</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">state</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">onClick</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;add&#34;</span><span class="p">,</span> <span class="nx">number</span><span class="o">:</span> <span class="mi">1</span> <span class="p">});</span>
+  <span class="p">};</span>
+  <span class="kr">const</span> <span class="nx">onClick2</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;add&#34;</span><span class="p">,</span> <span class="nx">number</span><span class="o">:</span> <span class="mi">2</span> <span class="p">});</span>
+  <span class="p">};</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;App&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">n</span><span class="o">:</span> <span class="p">{</span><span class="nx">n</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">onClick</span><span class="p">}</span><span class="o">&gt;+</span><span class="mi">1</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">onClick2</span><span class="p">}</span><span class="o">&gt;+</span><span class="mi">2</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="用来代替redux">用来代替Redux</h3>
+<p>将所有数据集中在一个store里面
+将所有操作集中在reducer里
+创建一个Context
+创建对函数读写的API
+将第四步的内容放到第三步的Context
+用Context.Provider将Context提供给所有组件
+各个组件使用Context获取读写API</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">user</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nx">books</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nx">movies</span><span class="o">:</span> <span class="kc">null</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">reducer</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="s2">&#34;setUser&#34;</span><span class="o">:</span>
+      <span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">state</span><span class="p">,</span> <span class="nx">user</span><span class="o">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">user</span> <span class="p">};</span>
+    <span class="k">case</span> <span class="s2">&#34;setBooks&#34;</span><span class="o">:</span>
+      <span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">state</span><span class="p">,</span> <span class="nx">books</span><span class="o">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">books</span> <span class="p">};</span>
+    <span class="k">case</span> <span class="s2">&#34;setMovies&#34;</span><span class="o">:</span>
+      <span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">state</span><span class="p">,</span> <span class="nx">movies</span><span class="o">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">movies</span> <span class="p">};</span>
+    <span class="k">default</span><span class="o">:</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">Context</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createContext</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">state</span><span class="p">,</span> <span class="nx">dispatch</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useReducer</span><span class="p">(</span><span class="nx">reducer</span><span class="p">,</span> <span class="nx">store</span><span class="p">);</span>
+
+  <span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">state</span><span class="p">,</span> <span class="nx">dispatch</span> <span class="p">};</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Context</span><span class="p">.</span><span class="nx">Provider</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">api</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">User</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">hr</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Books</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Movies</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/Context.Provider&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">User</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">{</span> <span class="nx">state</span><span class="p">,</span> <span class="nx">dispatch</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useContext</span><span class="p">(</span><span class="nx">Context</span><span class="p">);</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">ajax</span><span class="p">(</span><span class="s2">&#34;/user&#34;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">user</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;setUser&#34;</span><span class="p">,</span> <span class="nx">user</span><span class="o">:</span> <span class="nx">user</span> <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">},</span> <span class="p">[]);</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">个人信息</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">name</span><span class="o">:</span> <span class="p">{</span><span class="nx">state</span><span class="p">.</span><span class="nx">user</span> <span class="o">?</span> <span class="nx">state</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span> <span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">Books</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">{</span> <span class="nx">state</span><span class="p">,</span> <span class="nx">dispatch</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useContext</span><span class="p">(</span><span class="nx">Context</span><span class="p">);</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">ajax</span><span class="p">(</span><span class="s2">&#34;/books&#34;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">books</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;setBooks&#34;</span><span class="p">,</span> <span class="nx">books</span><span class="o">:</span> <span class="nx">books</span> <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">},</span> <span class="p">[]);</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">我的书籍</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ol</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">state</span><span class="p">.</span><span class="nx">books</span> <span class="o">?</span> <span class="nx">state</span><span class="p">.</span><span class="nx">books</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">book</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">book</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">book</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/li&gt;) : &#34;加载中&#34;}</span>
+      <span class="o">&lt;</span><span class="err">/ol&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">Movies</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">{</span> <span class="nx">state</span><span class="p">,</span> <span class="nx">dispatch</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useContext</span><span class="p">(</span><span class="nx">Context</span><span class="p">);</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">ajax</span><span class="p">(</span><span class="s2">&#34;/movies&#34;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">movies</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;setMovies&#34;</span><span class="p">,</span> <span class="nx">movies</span><span class="o">:</span> <span class="nx">movies</span> <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">},</span> <span class="p">[]);</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">我的电影</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ol</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">state</span><span class="p">.</span><span class="nx">movies</span>
+          <span class="o">?</span> <span class="nx">state</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">movie</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">movie</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">movie</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/li&gt;)</span>
+          <span class="o">:</span> <span class="s2">&#34;加载中&#34;</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="err">/ol&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div><h2 id="usememo">useMemo</h2>
+<p>减少多余的render
+App里面的Child组件不需要再次执行可以用<code>React.memo</code>包起来
+如果子组件了里面添加的监听事件触发则不行，需要改为<code>useMemo</code>即可</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">n</span><span class="p">,</span> <span class="nx">setN</span><span class="p">]</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">m</span><span class="p">,</span> <span class="nx">setM</span><span class="p">]</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">onClick</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setN</span><span class="p">(</span><span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;App&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">onClick</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">update</span> <span class="nx">n</span> <span class="p">{</span><span class="nx">n</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Child</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">m</span><span class="p">}</span><span class="o">/&gt;</span>
+      <span class="p">{</span><span class="cm">/* &lt;Child2 data={m}/&gt; */</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">Child</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;child 执行了&#34;</span><span class="p">);</span>
+  <span class="p">...</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;执行代码&#39;</span><span class="p">)</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">child</span><span class="o">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">Child2</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">memo</span><span class="p">(</span><span class="nx">Child</span><span class="p">);</span>
+</code></pre></div><p><code>useMemo</code> return返回一个函数，语法糖可以改写为<code>useCallback</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">ChildEvent</span> <span class="o">=</span> <span class="nx">useMemo</span><span class="p">(()=&gt;{</span>
+  <span class="k">return</span> <span class="p">()=&gt;{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;xxx&#39;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="kr">const</span> <span class="nx">ChildEvent</span> <span class="o">=</span> <span class="nx">useCallback</span><span class="p">(()=&gt;{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;xxx&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/react-hooks/" data-title="React Hooks" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/react-hooks/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/react-hooks/" data-title="React Hooks"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/react-hooks/" data-title="React Hooks"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/react-hooks/" data-title="React Hooks"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/react/" class="prev" rel="prev" title="React"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>React</a>
+            <a href="/posts/vite-pnpm/" class="next" rel="next" title="Vite Pnpm">Vite Pnpm<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">songen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

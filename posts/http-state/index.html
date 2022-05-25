@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>HTTP State - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="HTTP State" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/http-state/" />
+<meta property="article:published_time" content="2022-05-26T00:54:05+08:00" />
+<meta property="article:modified_time" content="2022-05-26T00:54:05+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTTP State"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/http-state/" /><link rel="prev" href="http://example.org/posts/tips/" /><link rel="next" href="http://example.org/posts/axios-cheat_sheet/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "HTTP State",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/http-state\/"
+        },"genre": "posts","wordcount":  2066 ,
+        "url": "http:\/\/example.org\/posts\/http-state\/","datePublished": "2022-05-26T00:54:05+08:00","dateModified": "2022-05-26T00:54:05+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "songen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">HTTP State</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>songen</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2066 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1xx-informational-提示信息">1xx Informational 提示信息</a>
+      <ul>
+        <li><a href="#100-continue">100 Continue</a></li>
+        <li><a href="#101-switching-protocols">101 Switching Protocols</a></li>
+        <li><a href="#102-processing-webdav-rfc-2518httpstoolsietforghtmlrfc2518section-101">102 Processing (WebDAV; <a href="https://tools.ietf.org/html/rfc2518#section-10.1">RFC 2518</a>)</a></li>
+        <li><a href="#103-early-hints-rfc-8297httpstoolsietforghtmlrfc8297">103 Early Hints (<a href="https://tools.ietf.org/html/rfc8297">RFC 8297</a>)</a></li>
+      </ul>
+    </li>
+    <li><a href="#2xx-successful-请求成功">2xx Successful 请求成功</a>
+      <ul>
+        <li><a href="#200-ok">200 OK</a></li>
+        <li><a href="#201-created">201 Created</a></li>
+        <li><a href="#202-accepted">202 Accepted</a></li>
+        <li><a href="#203-non-authoritative-information-rfc-7231httpstoolsietforghtmlrfc7231section-634">203 Non-Authoritative Information (<a href="https://tools.ietf.org/html/rfc7231#section-6.3.4">RFC 7231</a>)</a></li>
+        <li><a href="#204-no-content">204 No Content</a></li>
+        <li><a href="#205-reset-content-rfc-7231httpstoolsietforghtmlrfc7231section-636">205 Reset Content (<a href="https://tools.ietf.org/html/rfc7231#section-6.3.6">RFC 7231</a>)</a></li>
+        <li><a href="#206-partial-content">206 Partial Content</a></li>
+        <li><a href="#207-multi-status">207 Multi-Status</a></li>
+        <li><a href="#208-already-reported">208 Already Reported</a></li>
+        <li><a href="#226-im-used">226 IM Used</a></li>
+      </ul>
+    </li>
+    <li><a href="#3xx-redirection-跳转">3xx Redirection 跳转</a>
+      <ul>
+        <li><a href="#300-multiple-choices">300 Multiple Choices</a></li>
+        <li><a href="#301-moved-permanently">301 Moved Permanently</a></li>
+        <li><a href="#302-found-之前也被描述为-moved-temporarily">302 Found (之前也被描述为 Moved Temporarily)</a></li>
+        <li><a href="#303-see-other-http11-新增">303 See Other (HTTP/1.1 新增)</a></li>
+        <li><a href="#304-not-modified">304 Not Modified</a></li>
+        <li><a href="#305-use-proxy-http11-中新增">305 Use Proxy (HTTP/1.1 中新增)</a></li>
+        <li><a href="#306-switch-proxy">306 Switch Proxy</a></li>
+        <li><a href="#307-temporary-redirect-http11-中新增">307 Temporary Redirect (HTTP/1.1 中新增)</a></li>
+        <li><a href="#308-permanent-redirect-rfc-7538httpstoolsietforghtmlrfc7538">308 Permanent Redirect (<a href="https://tools.ietf.org/html/rfc7538">RFC 7538</a>)</a></li>
+      </ul>
+    </li>
+    <li><a href="#4xx-client-error-客户端错误">4xx Client Error 客户端错误</a>
+      <ul>
+        <li><a href="#400-bad-request">400 Bad Request</a></li>
+        <li><a href="#401-unauthorized">401 Unauthorized</a></li>
+        <li><a href="#402-payment-required">402 Payment Required</a></li>
+        <li><a href="#403-forbidden">403 Forbidden</a></li>
+        <li><a href="#404-not-found">404 Not Found</a></li>
+        <li><a href="#405-method-not-allowed">405 Method Not Allowed</a></li>
+        <li><a href="#406-not-acceptable">406 Not Acceptable</a></li>
+        <li><a href="#407-proxy-authentication-required">407 Proxy Authentication Required</a></li>
+        <li><a href="#408-request-timeout">408 Request Timeout</a></li>
+        <li><a href="#410-gone">410 Gone</a></li>
+        <li><a href="#411-length-required-rfc-7231httpstoolsietforghtmlrfc7231section-6510">411 Length Required (<a href="https://tools.ietf.org/html/rfc7231#section-6.5.10">RFC 7231</a>)</a></li>
+        <li><a href="#412-precondition-failed">412 Precondition Failed</a></li>
+        <li><a href="#413-payload-too-large-rfc-7231httpstoolsietforghtmlrfc7231section-6511">413 Payload Too Large (<a href="https://tools.ietf.org/html/rfc7231#section-6.5.11">RFC 7231</a>)</a></li>
+        <li><a href="#414-uri-too-long">414 URI Too Long</a></li>
+        <li><a href="#415-unsupported-media-type">415 Unsupported Media Type</a></li>
+        <li><a href="#416-range-not-satisfiable">416 Range Not Satisfiable</a></li>
+        <li><a href="#417-expectation-failed">417 Expectation Failed</a></li>
+        <li><a href="#418-im-a-teapot-rfc-2324httpstoolsietforghtmlrfc2324section-232-rfc-7168httpstoolsietforghtmlrfc7168section-233">418 I&rsquo;m a teapot (<a href="https://tools.ietf.org/html/rfc2324#section-2.3.2">RFC 2324</a>; <a href="https://tools.ietf.org/html/rfc7168#section-2.3.3">RFC 7168</a>)</a></li>
+        <li><a href="#421-misdirected-request">421 Misdirected Request</a></li>
+        <li><a href="#422-unprocessable-entity">422 Unprocessable Entity</a></li>
+        <li><a href="#423-locked">423 Locked</a></li>
+        <li><a href="#424-failed-dependency">424 Failed Dependency</a></li>
+        <li><a href="#425-too-early">425 Too Early</a></li>
+        <li><a href="#426-upgrade-required">426 Upgrade Required</a></li>
+        <li><a href="#428-precondition-required">428 Precondition Required</a></li>
+        <li><a href="#429-too-many-requests">429 Too Many Requests</a></li>
+        <li><a href="#431-request-header-fields-too-large">431 Request Header Fields Too Large</a></li>
+        <li><a href="#451-unavailable-for-legal-reasons">451 Unavailable For Legal Reasons</a></li>
+      </ul>
+    </li>
+    <li><a href="#5xx-server-error-服务器端错误">5xx Server Error 服务器端错误</a>
+      <ul>
+        <li><a href="#500-internal-server-error">500 Internal Server Error</a></li>
+        <li><a href="#501-not-implemented">501 Not Implemented</a></li>
+        <li><a href="#502-bad-gateway">502 Bad Gateway</a></li>
+        <li><a href="#503-service-unavailable">503 Service Unavailable</a></li>
+        <li><a href="#504-gateway-timeout">504 Gateway Timeout</a></li>
+        <li><a href="#505-http-version-not-supported">505 HTTP Version Not Supported</a></li>
+        <li><a href="#506-variant-also-negotiates">506 Variant Also Negotiates</a></li>
+        <li><a href="#507-insufficient-storage">507 Insufficient Storage</a></li>
+        <li><a href="#508-loop-detected">508 Loop Detected</a></li>
+        <li><a href="#510-not-extended">510 Not Extended</a></li>
+        <li><a href="#511-network-authentication-required">511 Network Authentication Required</a></li>
+      </ul>
+    </li>
+    <li><a href="#nginx">NGINX</a>
+      <ul>
+        <li><a href="#444-no-response">444 No Response</a></li>
+        <li><a href="#494-request-header-too-large">494 Request Header Too Large</a></li>
+        <li><a href="#495-ssl-certificate-error">495 SSL Certificate Error</a></li>
+        <li><a href="#496-ssl-certificate-required">496 SSL Certificate Required</a></li>
+        <li><a href="#497-http-request-sent-to-https-port">497 HTTP Request Sent to HTTPS Port</a></li>
+        <li><a href="#499-client-closed-request">499 Client Closed Request</a></li>
+      </ul>
+    </li>
+    <li><a href="#cloudflare">Cloudflare</a>
+      <ul>
+        <li><a href="#520-web-server-returned-an-unknown-error">520 Web Server Returned an Unknown Error</a></li>
+        <li><a href="#521-web-server-is-down">521 Web Server Is Down</a></li>
+        <li><a href="#522-connection-timed-out">522 Connection Timed Out</a></li>
+        <li><a href="#523-origin-is-unreachable">523 Origin Is Unreachable</a></li>
+        <li><a href="#524-a-timeout-occurred">524 A Timeout Occurred</a></li>
+        <li><a href="#525-ssl-handshake-failed">525 SSL Handshake Failed</a></li>
+        <li><a href="#526-invalid-ssl-certificate">526 Invalid SSL Certificate</a></li>
+        <li><a href="#527-railgun-error">527 Railgun Error</a></li>
+        <li><a href="#530">530</a></li>
+      </ul>
+    </li>
+    <li><a href="#中英对照词汇表">中英对照词汇表</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="heading"></h1>
+<h1 id="http-状态码参考">HTTP 状态码参考</h1>
+<h2 id="1xx-informational-提示信息">1xx Informational 提示信息</h2>
+<h3 id="100-continue">100 Continue</h3>
+<p>服务器端确认已经收到请求头，向客户端发送 100 Continue，然后客户端就可以继续发送 request body（如果 request body 是必要的话，比如在 POST 请求中）。要触发服务器端的这种行为，那么在发起请求时就需要在 request header 中包括 Expect: 100-continue 这个请求头。如果服务器端在收到了 Expect: 100-continue 之后以 403 Forbidden 或者 405 Method Not Allowed 应答，那么客户端就不应该继续发送 request body。
+如果服务器端以 417 Expectation Failed 应答，那么客户端应该在重新发起请求时不要带上 Expect 请求头，因为服务器端无法处理 Expect 请求头。</p>
+<h3 id="101-switching-protocols">101 Switching Protocols</h3>
+<p>客户端向服务器端请求切换协议，服务器端同意切换。</p>
+<h3 id="102-processing-webdav-rfc-2518httpstoolsietforghtmlrfc2518section-101">102 Processing (WebDAV; <a href="https://tools.ietf.org/html/rfc2518#section-10.1" target="_blank" rel="noopener noreffer">RFC 2518</a>)</h3>
+<p>一个 WebDAV 请求可能会包括多个涉及文件操作的子请求，需要耗费一些时间才能完成。102 状态码用于告知客户端请求已经收到并且正在处理，但是响应还没有准备好。这样可以防止客户端超时及认为请求没有成功发送。</p>
+<h3 id="103-early-hints-rfc-8297httpstoolsietforghtmlrfc8297">103 Early Hints (<a href="https://tools.ietf.org/html/rfc8297" target="_blank" rel="noopener noreffer">RFC 8297</a>)</h3>
+<p>在完整应答之前，用于向客户端先返回部分 HTTP 响应头用于提示重要资源的预先加载。</p>
+<h2 id="2xx-successful-请求成功">2xx Successful 请求成功</h2>
+<h3 id="200-ok">200 OK</h3>
+<p>表示请求成功完成的标准状态码。根据请求方法（request method）的不同，响应的内容也会不同。对于 GET 请求，那么响应内容就是被请求的资源。对于 POST 请求，响应内容通常是描述或者提供动作完成之后的结果。</p>
+<h3 id="201-created">201 Created</h3>
+<p>请求成功完成，并且结果是一个或者多个新的资源成功创建。如果创建成功的资源位于另外一个 URI 上，那么可以通过一个 Location 响应头部提示客户端跳转到新创建的 URI 上。</p>
+<h3 id="202-accepted">202 Accepted</h3>
+<p>请求被接受，但是处理还没有完成。通常用于客户端向服务器端提交批处理任务的情景。比如客户端提交了一个需要耗费很长时间计算的任务，服务器在接到请求但是计算结果还没有得出时可以返回 202 Accepted。之后如果客户端再次请求，数据已经计算完成时，再返回 200 OK。</p>
+<h3 id="203-non-authoritative-information-rfc-7231httpstoolsietforghtmlrfc7231section-634">203 Non-Authoritative Information (<a href="https://tools.ietf.org/html/rfc7231#section-6.3.4" target="_blank" rel="noopener noreffer">RFC 7231</a>)</h3>
+<p>203 状态码表示请求成功，但是来自源站的 200 OK 内容被中间的代理服务器做了修改。</p>
+<h3 id="204-no-content">204 No Content</h3>
+<p>服务器的响应中不会包括任何内容。但是响应头中可能会有一些有用的新信息，因此客户端依然可以以此更新本地缓存中的响应头。</p>
+<h3 id="205-reset-content-rfc-7231httpstoolsietforghtmlrfc7231section-636">205 Reset Content (<a href="https://tools.ietf.org/html/rfc7231#section-6.3.6" target="_blank" rel="noopener noreffer">RFC 7231</a>)</h3>
+<p>205 状态码表示服务器已经成功处理了请求，并且希望发起请求的客户端重置其「文档视图」，可能是一个用户可以输入数据的表单（form），记事本（notepad），或者画布（canvas）。这样当客户端收到这个状态码并重置之后，用户就可以继续输入其他新的数据。205 响应的正文部分应该是空的。即 Content-Length 应该为 0。</p>
+<h3 id="206-partial-content">206 Partial Content</h3>
+<p>当客户端向服务器端通过 Range 请求头请求资源的部分内容，服务器成功响应时会使用 206 状态码。如果服务器端不支持 Range 请求，那么可能会以 416 Range Not Satisfiable 状态响应。</p>
+<h3 id="207-multi-status">207 Multi-Status</h3>
+<h3 id="208-already-reported">208 Already Reported</h3>
+<h3 id="226-im-used">226 IM Used</h3>
+<h2 id="3xx-redirection-跳转">3xx Redirection 跳转</h2>
+<h3 id="300-multiple-choices">300 Multiple Choices</h3>
+<h3 id="301-moved-permanently">301 Moved Permanently</h3>
+<p>这次及将来所有的请求应该发送到服务器通过 Location 头部给出的新的 URI。意味着当前的这个地址已经永久性地转移到新地址。</p>
+<h3 id="302-found-之前也被描述为-moved-temporarily">302 Found (之前也被描述为 Moved Temporarily)</h3>
+<h3 id="303-see-other-http11-新增">303 See Other (HTTP/1.1 新增)</h3>
+<h3 id="304-not-modified">304 Not Modified</h3>
+<h3 id="305-use-proxy-http11-中新增">305 Use Proxy (HTTP/1.1 中新增)</h3>
+<h3 id="306-switch-proxy">306 Switch Proxy</h3>
+<h3 id="307-temporary-redirect-http11-中新增">307 Temporary Redirect (HTTP/1.1 中新增)</h3>
+<h3 id="308-permanent-redirect-rfc-7538httpstoolsietforghtmlrfc7538">308 Permanent Redirect (<a href="https://tools.ietf.org/html/rfc7538" target="_blank" rel="noopener noreffer">RFC 7538</a>)</h3>
+<h2 id="4xx-client-error-客户端错误">4xx Client Error 客户端错误</h2>
+<h3 id="400-bad-request">400 Bad Request</h3>
+<h3 id="401-unauthorized">401 Unauthorized</h3>
+<h3 id="402-payment-required">402 Payment Required</h3>
+<h3 id="403-forbidden">403 Forbidden</h3>
+<h3 id="404-not-found">404 Not Found</h3>
+<h3 id="405-method-not-allowed">405 Method Not Allowed</h3>
+<h3 id="406-not-acceptable">406 Not Acceptable</h3>
+<h3 id="407-proxy-authentication-required">407 Proxy Authentication Required</h3>
+<h3 id="408-request-timeout">408 Request Timeout</h3>
+<h3 id="410-gone">410 Gone</h3>
+<h3 id="411-length-required-rfc-7231httpstoolsietforghtmlrfc7231section-6510">411 Length Required (<a href="https://tools.ietf.org/html/rfc7231#section-6.5.10" target="_blank" rel="noopener noreffer">RFC 7231</a>)</h3>
+<h3 id="412-precondition-failed">412 Precondition Failed</h3>
+<h3 id="413-payload-too-large-rfc-7231httpstoolsietforghtmlrfc7231section-6511">413 Payload Too Large (<a href="https://tools.ietf.org/html/rfc7231#section-6.5.11" target="_blank" rel="noopener noreffer">RFC 7231</a>)</h3>
+<h3 id="414-uri-too-long">414 URI Too Long</h3>
+<h3 id="415-unsupported-media-type">415 Unsupported Media Type</h3>
+<h3 id="416-range-not-satisfiable">416 Range Not Satisfiable</h3>
+<h3 id="417-expectation-failed">417 Expectation Failed</h3>
+<h3 id="418-im-a-teapot-rfc-2324httpstoolsietforghtmlrfc2324section-232-rfc-7168httpstoolsietforghtmlrfc7168section-233">418 I&rsquo;m a teapot (<a href="https://tools.ietf.org/html/rfc2324#section-2.3.2" target="_blank" rel="noopener noreffer">RFC 2324</a>; <a href="https://tools.ietf.org/html/rfc7168#section-2.3.3" target="_blank" rel="noopener noreffer">RFC 7168</a>)</h3>
+<p>作为一个茶壶，服务器拒绝被用来煮咖啡。</p>
+<h3 id="421-misdirected-request">421 Misdirected Request</h3>
+<h3 id="422-unprocessable-entity">422 Unprocessable Entity</h3>
+<h3 id="423-locked">423 Locked</h3>
+<h3 id="424-failed-dependency">424 Failed Dependency</h3>
+<h3 id="425-too-early">425 Too Early</h3>
+<h3 id="426-upgrade-required">426 Upgrade Required</h3>
+<h3 id="428-precondition-required">428 Precondition Required</h3>
+<h3 id="429-too-many-requests">429 Too Many Requests</h3>
+<h3 id="431-request-header-fields-too-large">431 Request Header Fields Too Large</h3>
+<h3 id="451-unavailable-for-legal-reasons">451 Unavailable For Legal Reasons</h3>
+<h2 id="5xx-server-error-服务器端错误">5xx Server Error 服务器端错误</h2>
+<p>服务器因为自身的问题而无法满足请求时会给出 5xx 系列的状态码。</p>
+<h3 id="500-internal-server-error">500 Internal Server Error</h3>
+<h3 id="501-not-implemented">501 Not Implemented</h3>
+<h3 id="502-bad-gateway">502 Bad Gateway</h3>
+<h3 id="503-service-unavailable">503 Service Unavailable</h3>
+<h3 id="504-gateway-timeout">504 Gateway Timeout</h3>
+<h3 id="505-http-version-not-supported">505 HTTP Version Not Supported</h3>
+<p>服务器不支持被请求的 HTTP 协议版本。</p>
+<h3 id="506-variant-also-negotiates">506 Variant Also Negotiates</h3>
+<h3 id="507-insufficient-storage">507 Insufficient Storage</h3>
+<h3 id="508-loop-detected">508 Loop Detected</h3>
+<h3 id="510-not-extended">510 Not Extended</h3>
+<h3 id="511-network-authentication-required">511 Network Authentication Required</h3>
+<h2 id="nginx">NGINX</h2>
+<p>非常流行的 Web 服务器软件 <a href="http://nginx.org/" target="_blank" rel="noopener noreffer">NGINX</a> 对 4xx 系列的状态进行了一些扩展，用于描述客户端请求中的问题。
+NGINX 常用于反向代理其他 Web 服务，因此你有可能会在 NGINX 的日志中看到这些 NGINX 专有的状态码。</p>
+<h3 id="444-no-response">444 No Response</h3>
+<p><a href="http://nginx.org/en/docs/http/ngx_http_rewrite_module.html#return" target="_blank" rel="noopener noreffer">NGINX 的内部状态码</a>，用于告知 Web 服务器不要向客户端返回任何信息（包括不会返回任何响应头部 response header）并立即关闭链接。</p>
+<h3 id="494-request-header-too-large">494 Request Header Too Large</h3>
+<p>客户端发送的请求头部（request header）太长。</p>
+<h3 id="495-ssl-certificate-error">495 SSL Certificate Error</h3>
+<p>对 400 Bad Request 的扩展，在客户端提供了不合法的证书时会返回 495 状态码。</p>
+<h3 id="496-ssl-certificate-required">496 SSL Certificate Required</h3>
+<p>对 400 Bad Request 的扩展，在需要客户端提供证书但是客户端未提供时会返回 496 状态码。</p>
+<h3 id="497-http-request-sent-to-https-port">497 HTTP Request Sent to HTTPS Port</h3>
+<p>客户端错误地将 HTTP 明文请求发送到 HTTPS 端口时会收到 497 状态码。</p>
+<h3 id="499-client-closed-request">499 Client Closed Request</h3>
+<p>在服务器发送响应之前，如果客户端就提前关闭了请求，那么这条请求会收到 499 状态码。</p>
+<h2 id="cloudflare">Cloudflare</h2>
+<p><a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreffer">Cloudflare</a> 是互联网上非常流行的 CDN 服务，其对 5xx 系列状态码进行了扩展以描述其和源站（Origin）通讯时遇到的问题。</p>
+<h3 id="520-web-server-returned-an-unknown-error">520 Web Server Returned an Unknown Error</h3>
+<p>源站服务器向 Cloudflare 返回了一个空的，或者未知的，或者无法解释的响应。</p>
+<h3 id="521-web-server-is-down">521 Web Server Is Down</h3>
+<p>源站服务器无法连接。</p>
+<h3 id="522-connection-timed-out">522 Connection Timed Out</h3>
+<p>Cloudflare 与源站服务器 TCP 握手过程超时。</p>
+<h3 id="523-origin-is-unreachable">523 Origin Is Unreachable</h3>
+<p>Cloudflare 无法找到源站服务器。比如，可能是在 Cloudflare DNS 中指定了错误的源站服务器地址。</p>
+<h3 id="524-a-timeout-occurred">524 A Timeout Occurred</h3>
+<p>Cloudflare 能够和源站完成 TCP 连接，但是在等待源站返回一个 HTTP 响应时超时。</p>
+<h3 id="525-ssl-handshake-failed">525 SSL Handshake Failed</h3>
+<p>Cloudflare 在和配置了 SSL/TLS 的源站建立加密连接时失败。</p>
+<h3 id="526-invalid-ssl-certificate">526 Invalid SSL Certificate</h3>
+<p>源站的 SSL 证书无法通过 Cloudflare 的有效性验证。
+Cloudflare could not validate the SSL certificate on the origin web server.</p>
+<h3 id="527-railgun-error">527 Railgun Error</h3>
+<p>527 错误意味着 Cloudflare 和源站的 Railgun 服务器的连接遇到问题。常见的原因是防火墙干扰或者网络丢包。</p>
+<h3 id="530">530</h3>
+<p>530 错误通常会和一个 <a href="https://support.cloudflare.com/hc/en-us/articles/360029779472-Troubleshooting-Cloudflare-1XXX-errors" target="_blank" rel="noopener noreffer">Cloudflare 专有的 1xxx 错误</a>同时给出。</p>
+<h2 id="中英对照词汇表">中英对照词汇表</h2>
+<table>
+<thead>
+<tr>
+<th><strong>英文</strong></th>
+<th><strong>中文</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status Code</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td>Request</td>
+<td>请求</td>
+</tr>
+<tr>
+<td>Response</td>
+<td>响应</td>
+</tr>
+<tr>
+<td>Request Method</td>
+<td>请求方法</td>
+</tr>
+<tr>
+<td>Request Header</td>
+<td>请求头</td>
+</tr>
+<tr>
+<td>Response Header</td>
+<td>响应头</td>
+</tr>
+<tr>
+<td>RFC</td>
+<td>Request For Comment 缩写，互联网技术标准的定义文档</td>
+</tr>
+</tbody>
+</table></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/http-state/" data-title="HTTP State" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/http-state/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/http-state/" data-title="HTTP State"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/http-state/" data-title="HTTP State"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/http-state/" data-title="HTTP State"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/tips/" class="prev" rel="prev" title="Tips"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Tips</a>
+            <a href="/posts/axios-cheat_sheet/" class="next" rel="next" title="Axios Cheat_Sheet">Axios Cheat_Sheet<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">songen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

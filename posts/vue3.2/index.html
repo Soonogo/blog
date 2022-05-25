@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Vue3.2 - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Vue3.2" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/vue3.2/" />
+<meta property="article:published_time" content="2022-05-26T01:05:12+08:00" />
+<meta property="article:modified_time" content="2022-05-26T01:05:12+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vue3.2"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/vue3.2/" /><link rel="prev" href="http://example.org/posts/vue3/" /><link rel="next" href="http://example.org/posts/typescript/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Vue3.2",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/vue3.2\/"
+        },"genre": "posts","wordcount":  4023 ,
+        "url": "http:\/\/example.org\/posts\/vue3.2\/","datePublished": "2022-05-26T01:05:12+08:00","dateModified": "2022-05-26T01:05:12+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "songen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Vue3.2</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>songen</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;4023 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;9 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#setup语法糖">setup语法糖</a></li>
+    <li><a href="#script-setup-语法糖">script setup 语法糖</a></li>
+    <li><a href="#组件核心-api-的使用">组件核心 API 的使用</a>
+      <ul>
+        <li><a href="#属性和方法无需返回直接使用-这可能是带来的较大便利之一在以往的写法中定义数据和方法都需要在结尾-return-出去才能在模板中使用在-script-setup-中定义的属性和方法无需返回可以直接使用示例-html-支持-async-await-异步">属性和方法无需返回，直接使用！ 这可能是带来的较大便利之一，在以往的写法中，定义数据和方法，都需要在结尾 return 出去，才能在模板中使用。在 script setup 中，定义的属性和方法无需返回，可以直接使用！示例： ```html 支持 async await 异步</a></li>
+      </ul>
+    </li>
+    <li><a href="#关于-ts-与-eslint-的不完美">关于 TS 与 ESLint 的不完美</a></li>
+    <li><a href="#语法糖实现">语法糖实现</a></li>
+    <li><a href="#vscode配套插件">vscode配套插件</a></li>
+    <li><a href="#使用习惯">使用习惯</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="setup语法糖">setup语法糖</h2>
+<ol>
+<li><strong>「props」</strong> 第一个参数接受一个响应式的props，这个props指向的是外部的props。如果你没有定义props选项，setup中的第一个参数将为undifined。仍然遵循以前的原则；</li>
+</ol>
+<ul>
+<li>不要在子组件中修改props；如果尝试修改，将会给警告甚至报错。</li>
+<li>不要结构props。结构的props会失去响应性。</li>
+</ul>
+<p>2.<strong>「context」</strong> 第二个参数提供了一个上下文对象，选择性地暴露了一些 property。</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span><span class="o">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span><span class="nx">value</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,},</span>
+  <span class="nx">setup</span><span class="p">(</span><span class="nx">props</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;update:value&#34;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+      <span class="c1">// this.$emit()
+</span><span class="c1"></span>    <span class="p">};</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="nx">toggle</span> <span class="p">};</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+
+<span class="c1">//简写为以下写法
+</span><span class="c1"></span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span> <span class="nx">setup</span><span class="o">&gt;</span>
+    <span class="kr">const</span> <span class="nx">props</span> <span class="o">=</span> <span class="nx">defineProps</span><span class="p">({</span><span class="nx">value</span><span class="o">:</span> <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,},});</span>
+    <span class="kr">const</span> <span class="nx">emit</span> <span class="o">=</span> <span class="nx">defineEmits</span><span class="p">([</span><span class="s1">&#39;update:value&#39;</span><span class="p">]);</span>
+    <span class="kr">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="p">()=&gt;{</span>
+      <span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;update:value&#39;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+      <span class="c1">// this.$emit()
+</span><span class="c1"></span>    <span class="p">}</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">setup</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span><span class="o">&gt;</span>
+<span class="kr">import</span> <span class="nx">Tab</span> <span class="nx">from</span> <span class="s2">&#34;./tab.vue&#34;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useSlots</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
+<span class="kr">const</span> <span class="nx">slots</span> <span class="o">=</span> <span class="nx">useSlots</span><span class="p">().</span><span class="k">default</span><span class="p">()</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">type</span> <span class="o">===</span><span class="nx">Tab</span> <span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">type</span> <span class="o">===</span><span class="nx">Tab</span> <span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">type</span> <span class="o">===</span><span class="nx">Tab</span> <span class="p">)</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div><p><code>useSlots</code> 和<code>useAttrs</code> 是实际的运行时函数，返回<code> setupContext.slots</code> 和 <code>setupContext.attrs</code> 的等价物。它们也可以在正常的组合 API 函数中使用。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.nlark.com/yuque/0/2022/png/1716921/1648046194619-889bebe7-6723-45a7-aa70-6ad3be9c77ac.png#clientId=ua9434707-b779-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=562&amp;id=ub7153c7c&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=562&amp;originWidth=845&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=40921&amp;status=done&amp;style=none&amp;taskId=ud6ad7a4b-0acd-4406-8158-24b95044522&amp;title=&amp;width=845"
+        data-srcset="https://cdn.nlark.com/yuque/0/2022/png/1716921/1648046194619-889bebe7-6723-45a7-aa70-6ad3be9c77ac.png#clientId=ua9434707-b779-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=562&amp;id=ub7153c7c&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=562&amp;originWidth=845&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=40921&amp;status=done&amp;style=none&amp;taskId=ud6ad7a4b-0acd-4406-8158-24b95044522&amp;title=&amp;width=845, https://cdn.nlark.com/yuque/0/2022/png/1716921/1648046194619-889bebe7-6723-45a7-aa70-6ad3be9c77ac.png#clientId=ua9434707-b779-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=562&amp;id=ub7153c7c&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=562&amp;originWidth=845&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=40921&amp;status=done&amp;style=none&amp;taskId=ud6ad7a4b-0acd-4406-8158-24b95044522&amp;title=&amp;width=845 1.5x, https://cdn.nlark.com/yuque/0/2022/png/1716921/1648046194619-889bebe7-6723-45a7-aa70-6ad3be9c77ac.png#clientId=ua9434707-b779-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=562&amp;id=ub7153c7c&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=562&amp;originWidth=845&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=40921&amp;status=done&amp;style=none&amp;taskId=ud6ad7a4b-0acd-4406-8158-24b95044522&amp;title=&amp;width=845 2x"
+        data-sizes="auto"
+        alt="https://cdn.nlark.com/yuque/0/2022/png/1716921/1648046194619-889bebe7-6723-45a7-aa70-6ad3be9c77ac.png#clientId=ua9434707-b779-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=562&amp;id=ub7153c7c&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=562&amp;originWidth=845&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=40921&amp;status=done&amp;style=none&amp;taskId=ud6ad7a4b-0acd-4406-8158-24b95044522&amp;title=&amp;width=845"
+        title="image.png" /></p>
+<p><a href="https://www.cxyck.com/article/131214.html" target="_blank" rel="noopener noreffer"><strong>参考链接</strong></a>
+目前setup sugar已经进行了定稿，vue3 + setup sugar + TS的写法看起来很香,写本文时 Vue 版本是 &ldquo;^3.2.6&rdquo;</p>
+<h2 id="script-setup-语法糖">script setup 语法糖</h2>
+<p>新的 setup 选项是在组件创建之前, props 被解析之后执行，是组合式 API 的入口。
+WARNING\在 setup 中你应该避免使用 this，因为它不会找到组件实例。setup 的调用发生在 data property、computed property 或 methods 被解析之前，所以它们无法&gt;在 setup 中被获取。
+setup 选项是一个接收 props 和 context 的函数，我们将在之后进行讨论。此外，我们将 setup 返回的所有内容都暴露给组件的其余部分 (计算属性、方法、生命周期钩子等等) 以及组件的模板。
+它是 Vue3 的一个新语法糖，在 setup 函数中。所有 ES 模块导出都被认为是暴露给上下文的值，并包含在 setup() 返回对象中。相对于之前的写法，使用后，语法也变得更简单。
+在添加了setup的script标签中，我们不必声明和方法，这种写法会自动将所有顶级变量、函数，均会自动暴露给模板（template）使用\这里强调一句 “暴露给模板，跟暴露给外部不是一回事”
+使用方式极其简单，仅需要在 script 标签加上 setup 关键字即可。示例：
+该setup功能是新的组件选项。它是组件内部暴露出所有的属性和方法的统一API。
+使用后意味着，script标签内的内容相当于原本组件声明中setup()的函数体，不过也有一定的区别。
+使用 script setup 语法糖，组件只需引入不用注册，属性和方法也不用返回，也不用写setup函数，也不用写export default ，甚至是自定义指令也可以在我们的template中自动获得。基本语法
+调用时机
+创建组件实例，然后初始化 props ，紧接着就调用setup 函数。从生命周期钩子的视角来看，它会在 beforeCreate 钩子之前被调用.
+模板中使用
+如果 setup 返回一个对象，则对象的属性将会被合并到组件模板的渲染上下文
+setup 参数 「props」 第一个参数接受一个响应式的props，这个props指向的是外部的props。如果你没有定义props选项，setup中的第一个参数将为undifined。props和vue2.x并无什么不同,仍然遵循以前的原则； 不要在子组件中修改props；如果你尝试修改，将会给你警告甚至报错。 不要结构props。结构的props会失去响应性。
+2.「context」 第二个参数提供了一个上下文对象，从原来 2.x 中 this 选择性地暴露了一些 property。
+如果需要定义类似 name 的属性，可以再加个平级的 script 标签，在里面实现即可。</p>
+<h2 id="组件核心-api-的使用">组件核心 API 的使用</h2>
+<p>定义组件的 props
+通过defineProps指定当前 props 类型，获得上下文的props对象。示例：
+定义 emit
+使用defineEmit定义当前组件含有的事件，并通过返回的上下文去执行 emit。示例：
+父子组件通信
+defineProps 用来接收父组件传来的 props ; defineEmits 用来声明触发的事件。
+//父组件 //子组件
+子组件通过 defineProps 接收父组件传过来的数据，子组件通过 defineEmits 定义事件发送信息给父组件
+增强的props类型定义：
+const props = defineProps&lt;{ foo: string bar?: number }&gt;() const emit = defineEmit&lt;(e: &lsquo;update&rsquo; | &lsquo;delete&rsquo;, id: number) =&gt; void&gt;()
+不过注意，采用这种方法将无法使用props默认值。
+定义响应变量、函数、监听、计算属性computed watchEffect
+用于有副作用的操作，会自动收集依赖。
+和watch区别
+无需区分deep，immediate，只要依赖的数据发生变化，就会调用
+reactive
+此时name只会在初次创建的时候进行赋值，如果中间想要改变name的值，那么需要借助composition api 中的reactive。
+使用ref也能达到我们预期的&rsquo;counter',并且在模板中,vue进行了处理，我们可以直接使用counter而不用写counter.value.
+ref和reactive的关系:
+ref是一个{value:&lsquo;xxxx&rsquo;}的结构，value是一个reactive对象
+ref 暴露变量到模板
+曾经的提案中，如果需要暴露变量到模板，需要在变量前加入export声明：
+export const count = ref(0)
+不过在新版的提案中，无需export声明，编译器会自动寻找模板中使用的变量，只需像下面这样简单的声明，即可在模板中使用该变量
+生命周期方法
+因为 setup 是围绕 beforeCreate 和 created 生命周期钩子运行的，所以不需要显式地定义它们。换句话说，在这些钩子中编写的任何代码都应该直接在 setup 函数中编写。
+可以通过在生命周期钩子前面加上 “on” 来访问组件的生命周期钩子。官网：生命周期钩子
+下表包含如何在 setup () 内部调用生命周期钩子：
+选项式 APIHook inside setup beforeCreate Not needed* created Not needed* beforeMount onBeforeMount mounted onMounted beforeUpdate onBeforeUpdate updated onUpdated beforeUnmount onBeforeUnmount unmounted onUnmounted errorCaptured onErrorCaptured renderTracked onRenderTracked renderTriggered onRenderTriggered activated onActivated deactivated onDeactivated 获取 slots 和 attrs
+注：useContext API 被弃用，取而代之的是更加细分的 api。
+可以通过useContext从上下文中获取 slots 和 attrs。不过提案在正式通过后，废除了这个语法，被拆分成了useAttrs和useSlots。
+useAttrs：见名知意，这是用来获取 attrs 数据，但是这和 vue2 不同，里面包含了 class、属性、方法。 const attrs = useAttrs(); // 新 其他 Hook Api useCSSModule：CSS Modules 是一种 CSS 的模块化和组合系统。vue-loader 集成 CSS Modules，可以作为模拟 scoped CSS。允许在单个文件组件的setup中访问CSS模块。此 api 本人用的比较少，不过多做介绍。 useCssVars: 此 api 暂时资料比较少。介绍v-bind in styles时提到过。 useTransitionState: 此 api 暂时资料比较少。 useSSRContext: 此 api 暂时资料比较少。 defineExpose API
+传统的写法，我们可以在父组件中，通过 ref 实例的方式去访问子组件的内容，但在 script setup 中，该方法就不能用了，setup 相当于是一个闭包，除了内部的 template模板，谁都不能访问内部的数据和方法。
+如果需要对外暴露 setup 中的数据和方法，需要使用 defineExpose API。示例：
+const a = 1 const b = ref(2) defineExpose({ a, b, })
+注意：目前发现defineExpose暴露出去的属性以及方法都是 unknown 类型，如果有修正类型的方法，欢迎评论区补充。
+//父组件
+//子组件</p>
+<h3 id="属性和方法无需返回直接使用-这可能是带来的较大便利之一在以往的写法中定义数据和方法都需要在结尾-return-出去才能在模板中使用在-script-setup-中定义的属性和方法无需返回可以直接使用示例-html-支持-async-await-异步">属性和方法无需返回，直接使用！ 这可能是带来的较大便利之一，在以往的写法中，定义数据和方法，都需要在结尾 return 出去，才能在模板中使用。在 script setup 中，定义的属性和方法无需返回，可以直接使用！示例： ```html 支持 async await 异步</h3>
+<p>注意在vue3的源代码中，setup执行完毕，函数 getCurrentInstance 内部的有个值会释放对 currentInstance 的引用，await 语句会导致后续代码进入异步执行的情况。所以上述例子中最后一个 getCurrentInstance() 会返回 null，建议使用变量保存第一个 getCurrentInstance() 返回的引用.
+另外，await 的表达式会自动编译成在 await 之后保留当前组件实例上下文的格式。
+注意\async setup() 必须与 Suspense 组合使用，Suspense 目前还是处于实验阶段的特性。我们打算在将来的某个发布版本中开发完成并提供文档 - 如果你现在感兴趣，可以参照 tests 看它是如何工作的。
+定义组件其他配置
+配置项的缺失，有时候我们需要更改组件选项，在setup中我们目前是无法做到的。我们需要在上方再引入一个 script，在上方写入对应的 export即可，需要单开一个 script。
+注意：Vue 3 SFC 一般会自动从组件的文件名推断出组件的 name。在大多数情况下，不需要明确的 name 声明。唯一需要的情况是当你需要 包含或排除或直接检查组件的选项时，你需要这个名字。</p>
+<h2 id="关于-ts-与-eslint-的不完美">关于 TS 与 ESLint 的不完美</h2>
+<p>与@typescript-eslint/no-unused-vars规则不兼容，此规则含义为定义了，未进行使用。该规则其实影响不大，关闭即可。
+与导入的类型声明不兼容，当你通过解构的方式去导入类型，setup sugar 会进行自动导出。这时候，你就会收到 TS 的一条报错：此为类型，但被当作值使用。解决办法：类型导出使用export default导出或者引入时使用import * as xx来进行引入，也可以使用 import type { test } from &ldquo;./test&rdquo;;解决。</p>
+<h2 id="语法糖实现">语法糖实现</h2>
+<p>vue文件代码
+编译后的js代码：
+export default { setup() { const msg = &lsquo;Hello!&rsquo; return function render() { // has access to everything inside setup() scope // 在函数 setup 作用域，函数 render 能访问 setup 的一切， return h(&lsquo;div&rsquo;, msg) } } }
+注意到，即使普通变量也能作为模版被置入 template 中被编译，某些人认为这不合适，不够分离。</p>
+<h2 id="vscode配套插件">vscode配套插件</h2>
+<p>volar 是一个vscode插件，用来增强vue编写体验，使用volar插件可以获得script setup语法的最佳支持。
+与vetur相同，volar是一个针对vue的vscode插件，不过与vetur不同的是，volar提供了更为强大的功能，让人直呼卧槽。
+安装的方式很简单，直接在vscode的插件市场搜索volar，然后点击安装就可以了。
+vscode 中使用的时候，先禁用 Vetur，再下载使用Volar</p>
+<h2 id="使用习惯">使用习惯</h2>
+<p>从options api切换到composition api最大的问题无异于最大的问题就是没有强制的代码分区，如果书写的人没有很好的代码习惯，那么后续的人将会看的十分难受。目前我是这么解决的：
+自我代码分区并且尽量抽离方法（写好注释），分区如下：
+相关引入 响应式数据、props、emit 定义 生命周期以及 watch 书写 方法定义 方法、属性暴露
+组件抽离：将页面拆成两个文件夹，一个为 views，一个为 components。views 和 components 文件夹下有各自的文件。views 文件夹中为页面入口，掌管数据，而 components 则为页面中一些组件抽离。如果是公共组件，再抽离到 components 文件夹下其他位置。
+hook 抽离：尽可能将逻辑抽离，并不一定要进行复用。</p>
+<blockquote>
+<p>文章来源于网络</p>
+</blockquote></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/vue3.2/" data-title="Vue3.2" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/vue3.2/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/vue3.2/" data-title="Vue3.2"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/vue3.2/" data-title="Vue3.2"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/vue3.2/" data-title="Vue3.2"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/vue3/" class="prev" rel="prev" title="Vue3"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Vue3</a>
+            <a href="/posts/typescript/" class="next" rel="next" title="TypeScript">TypeScript<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">songen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

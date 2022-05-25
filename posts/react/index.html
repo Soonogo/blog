@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>React - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="React" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/react/" />
+<meta property="article:published_time" content="2022-05-26T01:13:57+08:00" />
+<meta property="article:modified_time" content="2022-05-26T01:13:57+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/react/" /><link rel="prev" href="http://example.org/posts/typescript/" /><link rel="next" href="http://example.org/posts/react-hooks/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "React",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/react\/"
+        },"genre": "posts","wordcount":  984 ,
+        "url": "http:\/\/example.org\/posts\/react\/","datePublished": "2022-05-26T01:13:57+08:00","dateModified": "2022-05-26T01:13:57+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "songen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">React</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>songen</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;984 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#函数组件vs类组件">函数组件vs类组件</a></li>
+        <li><a href="#jsx">JSX</a></li>
+        <li><a href="#state类组件">State：类组件</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><a href="https://codesandbox.io/s/tender-davinci-x14b5p?file=/index.html" target="_blank" rel="noopener noreffer">Codesandbox</a>
+全局引入React 和 ReactDOM</p>
+<h4 id="react是一个全局对象">React是一个全局对象：</h4>
+<h1 id="imagepnghttpss2lolinet20220526ruygd8ozdcqphq1png"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/RUyGd8OZDcqPhQ1.png"
+        data-srcset="https://s2.loli.net/2022/05/26/RUyGd8OZDcqPhQ1.png, https://s2.loli.net/2022/05/26/RUyGd8OZDcqPhQ1.png 1.5x, https://s2.loli.net/2022/05/26/RUyGd8OZDcqPhQ1.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/RUyGd8OZDcqPhQ1.png"
+        title="image.png" /></h1>
+<h4 id="reactdom也是一个全局对象">ReactDom也是一个全局对象：</h4>
+<h1 id="imagepnghttpss2lolinet20220526j5xcimgpkwtyaenpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/J5xCiMGpKwTyaen.png"
+        data-srcset="https://s2.loli.net/2022/05/26/J5xCiMGpKwTyaen.png, https://s2.loli.net/2022/05/26/J5xCiMGpKwTyaen.png 1.5x, https://s2.loli.net/2022/05/26/J5xCiMGpKwTyaen.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/J5xCiMGpKwTyaen.png"
+        title="image.png" /></h1>
+<p>用CDN的方式引入并用React创建一个对象：</p>
+<h1 id="imagepnghttpss2lolinet20220526ad8fsx4hz5glt7bpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/AD8FSX4hZ5Glt7B.png"
+        data-srcset="https://s2.loli.net/2022/05/26/AD8FSX4hZ5Glt7B.png, https://s2.loli.net/2022/05/26/AD8FSX4hZ5Glt7B.png 1.5x, https://s2.loli.net/2022/05/26/AD8FSX4hZ5Glt7B.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/AD8FSX4hZ5Glt7B.png"
+        title="image.png" /></h1>
+<p><code>React.createElement(&quot;div&quot;, { className: &quot;red&quot; }, [xxx])</code>React<a href="https://codesandbox.io/s/tender-davinci-x14b5p?file=/index.html" target="_blank" rel="noopener noreffer">链接</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//index.html
+</span><span class="c1"></span>
+<span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Parcel</span> <span class="nx">Sandbox</span><span class="o">&lt;</span><span class="err">/title&gt;</span>
+  <span class="o">&lt;</span><span class="err">/head&gt;</span>
+  <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&#34;root&#34;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://cdn.bootcdn.net/ajax/libs/react/17.0.0/umd/react.development.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.0/umd/react-dom.development.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;src/index.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+  <span class="o">&lt;</span><span class="err">/body&gt;</span>
+<span class="o">&lt;</span><span class="err">/html&gt;</span>
+
+
+
+<span class="c1">//index.js
+</span><span class="c1"></span>
+<span class="kd">let</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">APP</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span>
+  <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">className</span><span class="o">:</span> <span class="s2">&#34;red&#34;</span> <span class="p">},</span> <span class="p">[</span>
+    <span class="nx">n</span><span class="p">,</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+      <span class="s2">&#34;button&#34;</span><span class="p">,</span>
+      <span class="p">{</span>
+        <span class="nx">onClick</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="nx">n</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+          <span class="nb">window</span><span class="p">.</span><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">APP</span><span class="p">(),</span> <span class="nx">root</span><span class="p">);</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="s2">&#34;+1&#34;</span>
+    <span class="p">)</span>
+  <span class="p">]);</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">APP</span><span class="p">(),</span> <span class="nx">root</span><span class="p">);</span>
+
+</code></pre></div><p>直接用等于号会立刻取值并记录下料，箭头函数会延迟执行，在每次调用时执行
+<code>const APP1 = React.createElement(&quot;div&quot;, { className: &quot;red&quot; }, n)</code>
+APP1是一个React元素
+<code>const APP2 = ()=&gt; React.createElement(&quot;div&quot;, { className: &quot;red&quot; }, n)</code>
+APP2是一个React函数组件</p>
+<h3 id="函数组件vs类组件">函数组件vs类组件</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//函数组件
+</span><span class="c1"></span>
+<span class="kd">function</span> <span class="nx">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="nx">Welcome</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&#34;jack&#34;</span><span class="o">/&gt;</span>
+  
+<span class="c1">//类组件
+</span><span class="c1"></span>  
+<span class="kr">class</span> <span class="nx">Welcome</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="nx">Welcome</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&#34;jack&#34;</span><span class="o">/&gt;</span>
+</code></pre></div><h3 id="jsx">JSX</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//jsx
+</span><span class="c1"></span>
+<span class="nx">函数</span><span class="o">/</span><span class="nx">变量都要有</span><span class="p">{}</span><span class="nx">包住</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&#34;app&#34;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+ <span class="kd">let</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="kr">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+          <span class="p">{</span><span class="nx">n</span><span class="p">}</span>
+          <span class="o">&lt;</span><span class="nx">button</span>
+            <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+              <span class="nx">n</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">;</span>
+              <span class="nx">render</span><span class="p">();</span>
+            <span class="p">}}</span>
+          <span class="o">&gt;</span>
+            <span class="o">+</span><span class="mi">2</span>
+          <span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+      <span class="p">);</span>
+      <span class="kr">const</span> <span class="nx">render</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span>
+        <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;#app&#34;</span><span class="p">));</span>
+      <span class="nx">render</span><span class="p">();</span>
+</code></pre></div><h3 id="state类组件">State：类组件</h3>
+<p>State，SetState不会改变原来的对象，而是生成一个新的对象去赋值（数据不可变）</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">
+<span class="kr">class</span> <span class="nx">Son</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">n</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+  <span class="nx">add</span><span class="p">()</span> <span class="p">{</span>  <span class="c1">//异步更新
+</span><span class="c1"></span>    <span class="c1">//this.setState({ n: this.state.n + 1 });
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">((</span><span class="nx">state</span><span class="p">)=&gt;{</span>
+      <span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">state</span><span class="p">.</span><span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>  
+    <span class="p">})</span>
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;Son&#34;</span><span class="o">&gt;</span>
+         <span class="nx">n</span><span class="o">:</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">n</span><span class="p">}</span>
+  
+        <span class="c1">//事件绑定	
+</span><span class="c1"></span>        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">()}</span><span class="o">&gt;+</span><span class="mi">1</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Grandson</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>类组件里事件：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">x</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">component</span><span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">n</span><span class="o">:</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">//
+</span><span class="c1"></span><span class="kr">class</span> <span class="nx">x</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">component</span><span class="p">{</span>
+   <span class="nx">add</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">n</span><span class="o">:</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">})</span>
+<span class="p">}</span>
+
+</code></pre></div><p>箭头函数的this是当前对象的，而普通函数的this是在window上</p>
+<blockquote>
+<p>使用 create-react-app</p>
+</blockquote>
+<p>初始目录：</p>
+<h1 id="imagepnghttpss2lolinet20220526vdwtqziahgo8x5epng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/VdwTQziahGo8X5e.png"
+        data-srcset="https://s2.loli.net/2022/05/26/VdwTQziahGo8X5e.png, https://s2.loli.net/2022/05/26/VdwTQziahGo8X5e.png 1.5x, https://s2.loli.net/2022/05/26/VdwTQziahGo8X5e.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/VdwTQziahGo8X5e.png"
+        title="image.png" /></h1>
+<p>每次<code>yarn start</code>都会打开新的浏览器页面
+在根目录下添加<code>.env </code>里面写入<code> BROWSER=none</code> 就不会自动打开页面了</p>
+<p>添加<code>&quot;baseUrl&quot;: &quot;src&quot; </code>到<code> tsconfig.json/jsconfig.json</code>里
+就可以直接写<code> import {xxx} from 'component/Button.tsx'</code>
+前面默认有<code>src/</code>
+CSS一样 可以直接引用 不需要前面加<code>src/</code></p>
+<p>CSS方案采用<code>styled-components</code>简单好用：</p>
+<h1 id="imagepnghttpss2lolinet20220526engworpoxhdk9ebpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/eNGwoRPOXHDk9EB.png"
+        data-srcset="https://s2.loli.net/2022/05/26/eNGwoRPOXHDk9EB.png, https://s2.loli.net/2022/05/26/eNGwoRPOXHDk9EB.png 1.5x, https://s2.loli.net/2022/05/26/eNGwoRPOXHDk9EB.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/eNGwoRPOXHDk9EB.png"
+        title="image.png" /></h1>
+<p><code>react-router-dom@6.3.0</code>:
+<code>&lt;Route _index element_={&lt;Money /&gt;} /&gt;</code>默认首页为？ 用<code>index</code>参数
+其他所有的用<code>&lt;Route _path_=&quot;/*&quot; _element_={&lt;NoMatch/&gt;}&gt;</code>表示404页面</p>
+<h1 id="imagepnghttpss2lolinet202205268vn3surhis1fjcmpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/8Vn3SURhis1FjcM.png"
+        data-srcset="https://s2.loli.net/2022/05/26/8Vn3SURhis1FjcM.png, https://s2.loli.net/2022/05/26/8Vn3SURhis1FjcM.png 1.5x, https://s2.loli.net/2022/05/26/8Vn3SURhis1FjcM.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/8Vn3SURhis1FjcM.png"
+        title="image.png" /></h1>
+<p>项目使用<code>[svg-loader](https://github.com/svg/svgo)</code>、<code>[svg-sprite-loader](https://github.com/JetBrains/svg-sprite-loader)</code></p>
+<h1 id="imagepnghttpss2lolinet20220526pzfnmut41wjskcwpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/pzfNMUt41wjSKcW.png"
+        data-srcset="https://s2.loli.net/2022/05/26/pzfNMUt41wjSKcW.png, https://s2.loli.net/2022/05/26/pzfNMUt41wjSKcW.png 1.5x, https://s2.loli.net/2022/05/26/pzfNMUt41wjSKcW.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/pzfNMUt41wjSKcW.png"
+        title="image.png" /></h1>
+<p><code>yarn eject</code>//操作不可逆
+<code>git add . =&gt; git commit -m 'eject'</code>
+<code>./config/webpack.config.js</code></p>
+<h1 id="imagepnghttpss2lolinet20220526rxtmfczgsv4ynqtpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/rXtMFczgsv4YnqT.png"
+        data-srcset="https://s2.loli.net/2022/05/26/rXtMFczgsv4YnqT.png, https://s2.loli.net/2022/05/26/rXtMFczgsv4YnqT.png 1.5x, https://s2.loli.net/2022/05/26/rXtMFczgsv4YnqT.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/rXtMFczgsv4YnqT.png"
+        title="image.png" /></h1>
+<p>找到<code>module.exports</code> 在找到<code>return</code></p>
+<h1 id="imagepnghttpss2lolinet20220526k3syplyzagdceuipng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/k3syplYzagdCeui.png"
+        data-srcset="https://s2.loli.net/2022/05/26/k3syplYzagdCeui.png, https://s2.loli.net/2022/05/26/k3syplYzagdCeui.png 1.5x, https://s2.loli.net/2022/05/26/k3syplYzagdCeui.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/k3syplYzagdCeui.png"
+        title="image.png" /></h1>
+<p>再找到<code>module</code>模块，在<code>rules</code>里添加<code>loader</code></p>
+<h1 id="imagepnghttpss2lolinet20220526wtalqfammwf3kcupng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/wTALqFaMmWf3KCU.png"
+        data-srcset="https://s2.loli.net/2022/05/26/wTALqFaMmWf3KCU.png, https://s2.loli.net/2022/05/26/wTALqFaMmWf3KCU.png 1.5x, https://s2.loli.net/2022/05/26/wTALqFaMmWf3KCU.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/wTALqFaMmWf3KCU.png"
+        title="image.png" /></h1>
+<p>使用<a href="https://www.iconfont.cn/" target="_blank" rel="noopener noreffer">iconfont</a>则只需要用<code>script</code>标签引入即可</p>
+<h1 id="imagepnghttpss2lolinet20220526icqiqzoff3hoayepng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/iCqIQZoFf3hOAyE.png"
+        data-srcset="https://s2.loli.net/2022/05/26/iCqIQZoFf3hOAyE.png, https://s2.loli.net/2022/05/26/iCqIQZoFf3hOAyE.png 1.5x, https://s2.loli.net/2022/05/26/iCqIQZoFf3hOAyE.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/iCqIQZoFf3hOAyE.png"
+        title="image.png" /></h1>
+<p><code>webstorm: shift shift</code>快速包裹选中元素</p>
+<h1 id="imagepnghttpss2lolinet20220526ykqgr6xzvfjwwbapng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/26/YkQgR6xzVfJWwBA.png"
+        data-srcset="https://s2.loli.net/2022/05/26/YkQgR6xzVfJWwBA.png, https://s2.loli.net/2022/05/26/YkQgR6xzVfJWwBA.png 1.5x, https://s2.loli.net/2022/05/26/YkQgR6xzVfJWwBA.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/26/YkQgR6xzVfJWwBA.png"
+        title="image.png" /></h1></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/react/" data-title="React" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/react/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/react/" data-title="React"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/react/" data-title="React"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/react/" data-title="React"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/typescript/" class="prev" rel="prev" title="TypeScript"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>TypeScript</a>
+            <a href="/posts/react-hooks/" class="next" rel="next" title="React Hooks">React Hooks<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">songen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

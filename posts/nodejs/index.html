@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Nodejs - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Nodejs" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/nodejs/" />
+<meta property="article:published_time" content="2022-05-26T00:59:44+08:00" />
+<meta property="article:modified_time" content="2022-05-26T00:59:44+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Nodejs"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/nodejs/" /><link rel="prev" href="http://example.org/posts/sort/" /><link rel="next" href="http://example.org/posts/npm/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Nodejs",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/nodejs\/"
+        },"genre": "posts","wordcount":  424 ,
+        "url": "http:\/\/example.org\/posts\/nodejs\/","datePublished": "2022-05-26T00:59:44+08:00","dateModified": "2022-05-26T00:59:44+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "songen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Nodejs</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>songen</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;424 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><ol>
+<li>Commander.js</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="p">{</span><span class="nx">Command</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;commander&#39;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">program</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Command</span><span class="p">()</span>
+
+<span class="nx">program</span>
+  <span class="p">.</span><span class="nx">version</span><span class="p">(</span><span class="s1">&#39;0.0.1&#39;</span><span class="p">)</span> 
+  <span class="p">.</span><span class="nx">name</span><span class="p">(</span><span class="s1">&#39;fy&#39;</span><span class="p">)</span> 
+  <span class="p">.</span><span class="nx">usage</span><span class="p">(</span><span class="s1">&#39;&lt;English&gt;&#39;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">argument</span><span class="p">(</span><span class="s1">&#39;English&#39;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">action</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">english</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">english</span><span class="p">)</span>
+  <span class="p">})</span>
+
+<span class="nx">program</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">)</span>
+</code></pre></div><ol start="2">
+<li>HTTPS 模块</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">https</span> <span class="nx">from</span> <span class="s1">&#39;https&#39;</span> 
+
+<span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1">// hostname: &#39;fanyi-api.baidu.com&#39;,
+</span><span class="c1"></span>    <span class="nx">hostname</span><span class="o">:</span> <span class="s1">&#39;api.fanyi.baidu.com&#39;</span><span class="p">,</span>
+    <span class="nx">port</span><span class="o">:</span> <span class="mi">443</span><span class="p">,</span>
+    <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/api/trans/vip/translate?&#39;</span> <span class="o">+</span> <span class="nx">query</span><span class="p">,</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span>
+  <span class="p">};</span>
+
+  <span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">https</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">chunks</span><span class="o">:</span><span class="nx">Buffer</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span>
+    <span class="p">});</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">chunks</span><span class="p">).</span><span class="nx">toString</span><span class="p">();</span>
+      <span class="nx">type</span> <span class="nx">BaiduResult</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">error_msg</span><span class="o">?:</span> <span class="nx">string</span><span class="p">;</span>
+        <span class="nx">error_code</span><span class="o">?:</span> <span class="nx">string</span><span class="p">;</span>
+        <span class="nx">from</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+        <span class="nx">to</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+        <span class="nx">trans_result</span><span class="o">:</span> <span class="p">{</span> <span class="nx">src</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span> <span class="nx">dst</span><span class="o">:</span> <span class="nx">string</span> <span class="p">}[]</span>
+      <span class="p">}</span>
+      <span class="kr">const</span> <span class="nx">obj</span><span class="o">:</span> <span class="nx">BaiduResult</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">error_code</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">errorMap</span><span class="p">[</span><span class="nx">obj</span><span class="p">.</span><span class="nx">error_code</span><span class="p">]</span> <span class="o">||</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">error_msg</span><span class="p">);</span>
+        <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">obj</span><span class="p">.</span><span class="nx">trans_result</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">obj</span><span class="p">)=&gt;{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">dst</span><span class="p">);})</span>
+        <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+  <span class="nx">request</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="nx">request</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+
+
+<span class="p">};</span>
+</code></pre></div><ol start="3">
+<li>querystring 查询字符串</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">querystring</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">[,</span> <span class="nx">sep</span><span class="p">[,</span> <span class="nx">eq</span><span class="p">[,</span> <span class="nx">options</span><span class="p">]]])</span>
+<span class="o">-&gt;</span>
+<span class="nx">querystring</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span> <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="nx">baz</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;qux&#39;</span><span class="p">,</span> <span class="s1">&#39;quux&#39;</span><span class="p">],</span> <span class="nx">corge</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="p">});</span>
+<span class="c1">// 返回 &#39;foo=bar&amp;baz=qux&amp;baz=quux&amp;corge=&#39;
+</span></code></pre></div><pre><code>---------------------------------------------------------------------------------------
+Language                             files          blank        comment           code
+---------------------------------------------------------------------------------------
+Perl                                   628          33435          28224        2106458
+C++                                   2373         202313         171993        1644594
+JavaScript                           16157         198335         219483        1337991
+Assembly                               408          65948           9513         716931
+C                                     1970          97894          86608         614690
+C/C++ Header                          3197         112342         233488         521333
+Python                                 685          17294          24420         187441
+Markdown                               484          49946              3         179208
+JSON                                   557             14              0          74211
+HTML                                   397           4154           1278          57598
+Bourne Shell                           111           8578           8264          43129
+m4                                      35           2447           1429          21485
+TypeScript                              96           1165           2008           9174
+YAML                                    71            735            151           6105
+IDL                                     12            757              0           4023
+Starlark                                 2            102            113           3239
+make                                    27            554            411           2641
+CSS                                      9            388              9           2165
+CMake                                   14            361            347           1574
+diff                                    11            114            543           1526
+Bazel                                    5            106             56           1359
+DOS Batch                               33            172             56           1329
+XHTML                                    4            101             36            829
+D                                        3            100            292            698
+reStructuredText                        33           2011           2996            664
+Windows Module Definition                8             84              7            548
+XML                                     12              8             21            418
+WiX source                               1             55              7            378
+PowerShell                              15             15             75            330
+CSV                                      5              0              0            314
+Lisp                                     4             46             77            293
+Bourne Again Shell                       9             64             38            259
+R                                        4             49             49            245
+Scheme                                   1             13             51            222
+Windows Resource File                    4             49             94            209
+SVG                                      4              1              9            193
+C#                                       1             55              9            186
+vim script                               3             28             30            147
+WebAssembly                             15             19              8            135
+PHP                                      1             13             19            124
+WiX string localization                  4             45             12            103
+MSBuild script                           1              0             16             93
+Visual Studio Solution                   1              1              1             44
+awk                                      1              1              8             18
+CoffeeScript                             1              7              8             14
+INI                                      1              5              1             13
+Ruby                                     1              4              5             13
+JSX                                      1              1              0             11
+Dockerfile                               1              3              0             10
+sed                                      1              0              0              6
+---------------------------------------------------------------------------------------
+SUM:                                 27422         799932         792266        7544721
+---------------------------------------------------------------------------------------
+</code></pre></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/nodejs/" data-title="Nodejs" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/nodejs/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/nodejs/" data-title="Nodejs"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/nodejs/" data-title="Nodejs"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/nodejs/" data-title="Nodejs"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/sort/" class="prev" rel="prev" title="Sort"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Sort</a>
+            <a href="/posts/npm/" class="next" rel="next" title="NPM">NPM<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">songen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

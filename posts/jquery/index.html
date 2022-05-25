@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>JQuery - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="JQuery" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/jquery/" />
+<meta property="article:published_time" content="2022-05-26T00:49:15+08:00" />
+<meta property="article:modified_time" content="2022-05-26T00:49:15+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JQuery"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/jquery/" /><link rel="prev" href="http://example.org/posts/dom/" /><link rel="next" href="http://example.org/posts/mvc/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "JQuery",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/jquery\/"
+        },"genre": "posts","wordcount":  1250 ,
+        "url": "http:\/\/example.org\/posts\/jquery\/","datePublished": "2022-05-26T00:49:15+08:00","dateModified": "2022-05-26T00:49:15+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "songen"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">JQuery</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>songen</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1250 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1jquery-如何获取元素">1.jQuery 如何获取元素</a></li>
+        <li><a href="#2-jquery-的链式操作是怎样的">2. jQuery 的链式操作是怎样的</a></li>
+        <li><a href="#3jquery-如何创建元素">3.jQuery 如何创建元素</a></li>
+        <li><a href="#4jquery-如何移动元素">4.jQuery 如何移动元素</a></li>
+        <li><a href="#5jquery-如何修改元素的属性">5.jQuery 如何修改元素的属性</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="1jquery-如何获取元素">1.jQuery 如何获取元素</h3>
+<p>jQuery的基本设计思想和主要用法，就是**&ldquo;选择某个网页元素，然后对其进行某种操作&rdquo;**。这是它区别于其他Javascript库的根本特点。
+使用jQuery的第一步，往往就是将一个选择表达式，放进构造函数jQuery()（简写为$），然后得到被选中的元素。
+选择表达式可以是<a href="http://www.ruanyifeng.com/blog/2009/03/css_selectors.html" target="_blank" rel="noopener noreffer">CSS选择器</a>：</p>
+<blockquote>
+<p>　　<code>$(document)</code> //选择整个文档对象</p>
+<p>　　<code>$('#myId')</code> //选择ID为myId的网页元素</p>
+<p>　　<code>$('div.myClass')</code> // 选择class为myClass的div元素</p>
+<p>　　<code>$('input[name=first]')</code> // 选择name属性等于first的input元素</p>
+</blockquote>
+<p>也可以是jQuery<a href="http://api.jquery.com/category/selectors/" target="_blank" rel="noopener noreffer">特有的表达式</a>：</p>
+<blockquote>
+<p>　　<code>$('a:first') </code>//选择网页中第一个a元素</p>
+<p>　　<code>$('tr:odd') </code>//选择表格的奇数行</p>
+<p>　　<code>$('#myForm :input') </code>// 选择表单中的input元素</p>
+<p>　　<code>$('div:visible')</code> //选择可见的div元素</p>
+<p>　　<code>$('div:gt(2)')</code> // 选择所有的div元素，除了前三个</p>
+<p>　　<code>$('div:animated')</code> // 选择当前处于动画状态的div元素</p>
+</blockquote>
+<h3 id="2-jquery-的链式操作是怎样的">2. jQuery 的链式操作是怎样的</h3>
+<p>jQuery设计思想之链式操作，就是最终选中网页元素以后，可以对它进行一系列操作，并且所有操作可以连接在一起，以链条的形式写出来，比如：</p>
+<blockquote>
+<p>　　<code>$('div').find('h3').eq(2).html('Hello');</code></p>
+</blockquote>
+<p>分解开来，就是下面这样：</p>
+<blockquote>
+<p>　　<code>$('div')</code> //找到div元素
+　　　<code>.find('h3')</code> //选择其中的h3元素
+　　　<code>.eq(2)</code> //选择第3个h3元素
+　　　<code>.html('Hello');</code> //将它的内容改为Hello</p>
+</blockquote>
+<p>这是jQuery最令人称道、最方便的特点。它的原理在于每一步的jQuery操作，返回的都是一个jQuery对象，所以不同操作可以连在一起。
+jQuery还提供了<a href="http://api.jquery.com/end/" target="_blank" rel="noopener noreffer">.end()</a>方法，使得结果集可以后退一步：</p>
+<blockquote>
+<p>　　<code>$('div')</code>
+　　　<code>.find('h3')</code>
+　　　<code>.eq(2)</code>
+　　　<code>.html('Hello')</code>
+　　　<code>**.end()**</code>** //退回到选中所有的h3元素的那一步**
+　　　<code>.eq(0)</code> //选中第一个h3元素
+　　　<code>.html('World');</code> //将它的内容改为World</p>
+</blockquote>
+<h3 id="3jquery-如何创建元素">3.jQuery 如何创建元素</h3>
+<p>jQuery创建元素很简单，只要把新元素传入jQuery的构造函数就可以了。如下:</p>
+<pre><code>$('&lt;p&gt;Hello&lt;/p&gt;');
+　　$('&lt;li class=&quot;new&quot;&gt;new list item&lt;/li&gt;');
+　　$('ul').append('&lt;li&gt;list item&lt;/li&gt;');
+</code></pre><h3 id="4jquery-如何移动元素">4.jQuery 如何移动元素</h3>
+<p>jQuery设计思想之移动元素，就是提供两组方法，来操作元素在网页中的位置移动。一组方法是直接移动该元素，另一组方法是移动其他元素，使得目标元素达到我们想要的位置。
+假定我们选中了一个div元素，需要把它移动到p元素后面。
+第一种方法是使用<a href="http://api.jquery.com/insertAfter/" target="_blank" rel="noopener noreffer">.insertAfter()</a>，把div元素移动p元素后面：</p>
+<blockquote>
+<p>　<code>$('div').insertAfter($('p'));</code></p>
+</blockquote>
+<p>第二种方法是使用<a href="http://api.jquery.com/after/" target="_blank" rel="noopener noreffer">.after()</a>，把p元素加到div元素前面：</p>
+<blockquote>
+<p>　<code>$('p').after($('div'));</code></p>
+</blockquote>
+<p>表面上看，这两种方法的效果是一样的，唯一的不同似乎只是操作视角的不同。但是实际上，它们有一个重大差别，那就是返回的元素不一样。第一种方法返回div元素，第二种方法返回p元素。你可以根据需要，选择到底使用哪一种方法。
+使用这种模式的操作方法，一共有四对：</p>
+<blockquote>
+<p>　　<a href="http://api.jquery.com/insertAfter/" target="_blank" rel="noopener noreffer">.insertAfter()</a>和<a href="http://api.jquery.com/after/" target="_blank" rel="noopener noreffer">.after()</a>：在现存元素的外部，从后面插入元素
+　　<a href="http://api.jquery.com/insertBefore/" target="_blank" rel="noopener noreffer">.insertBefore()</a>和<a href="http://api.jquery.com/before" target="_blank" rel="noopener noreffer">.before()</a>：在现存元素的外部，从前面插入元素
+　　<a href="http://api.jquery.com/appendTo/" target="_blank" rel="noopener noreffer">.appendTo()</a>和<a href="http://api.jquery.com/append" target="_blank" rel="noopener noreffer">.append()</a>：在现存元素的内部，从后面插入元素
+　　<a href="http://api.jquery.com/prependTo/" target="_blank" rel="noopener noreffer">.prependTo()</a>和<a href="http://api.jquery.com/prepend" target="_blank" rel="noopener noreffer">.prepend()</a>：在现存元素的内部，从前面插入元素</p>
+</blockquote>
+<h3 id="5jquery-如何修改元素的属性">5.jQuery 如何修改元素的属性</h3>
+<p>jQuery修改元素的属性也很简单，使用.css()或者.style就可以了，一般使用.style更好。</p>
+<p>[资料来源：<a href="http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html" target="_blank" rel="noopener noreffer">阮一峰</a>的jQuery设计思想]</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-05-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/jquery/" data-title="JQuery" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/jquery/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/jquery/" data-title="JQuery"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/jquery/" data-title="JQuery"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/jquery/" data-title="JQuery"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/dom/" class="prev" rel="prev" title="DOM"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>DOM</a>
+            <a href="/posts/mvc/" class="next" rel="next" title="MVC">MVC<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">songen</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
