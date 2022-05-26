@@ -1,89 +1,89 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>我的全新 Hugo 网站</title>
-        <link>http://example.org/</link>
+        <title>Songen&#39;s Blog</title>
+        <link>http://songenen.github.io/</link>
         <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>tttsongen@foxmail.com (songen)</managingEditor>
-            <webMaster>tttsongen@foxmail.com (songen)</webMaster><lastBuildDate>Thu, 26 May 2022 01:26:40 &#43;0800</lastBuildDate>
-            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>tttsongen@foxmail.com (SongEn)</managingEditor>
+            <webMaster>tttsongen@foxmail.com (SongEn)</webMaster><lastBuildDate>Thu, 26 May 2022 01:26:40 &#43;0800</lastBuildDate>
+            <atom:link href="http://songenen.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>Vite Pnpm</title>
-    <link>http://example.org/posts/vite-pnpm/</link>
+    <title>Vite &amp; Pnpm</title>
+    <link>http://songenen.github.io/posts/vite-pnpm/</link>
     <pubDate>Thu, 26 May 2022 01:26:40 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/vite-pnpm/</guid>
+    <guid>http://songenen.github.io/posts/vite-pnpm/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>React Hooks</title>
-    <link>http://example.org/posts/react-hooks/</link>
+    <link>http://songenen.github.io/posts/react-hooks/</link>
     <pubDate>Thu, 26 May 2022 01:23:57 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/react-hooks/</guid>
+    <guid>http://songenen.github.io/posts/react-hooks/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>React</title>
-    <link>http://example.org/posts/react/</link>
+    <link>http://songenen.github.io/posts/react/</link>
     <pubDate>Thu, 26 May 2022 01:13:57 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/react/</guid>
+    <guid>http://songenen.github.io/posts/react/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>TypeScript</title>
-    <link>http://example.org/posts/typescript/</link>
+    <link>http://songenen.github.io/posts/typescript/</link>
     <pubDate>Thu, 26 May 2022 01:10:39 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/typescript/</guid>
+    <guid>http://songenen.github.io/posts/typescript/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Vue3.2</title>
-    <link>http://example.org/posts/vue3.2/</link>
+    <link>http://songenen.github.io/posts/vue3.2/</link>
     <pubDate>Thu, 26 May 2022 01:05:12 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/vue3.2/</guid>
+    <guid>http://songenen.github.io/posts/vue3.2/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Vue3</title>
-    <link>http://example.org/posts/vue3/</link>
+    <link>http://songenen.github.io/posts/vue3/</link>
     <pubDate>Thu, 26 May 2022 01:04:13 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/vue3/</guid>
+    <guid>http://songenen.github.io/posts/vue3/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>DOM Event</title>
-    <link>http://example.org/posts/dom-event/</link>
+    <link>http://songenen.github.io/posts/dom-event/</link>
     <pubDate>Thu, 26 May 2022 01:03:17 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/dom-event/</guid>
+    <guid>http://songenen.github.io/posts/dom-event/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>AJAX</title>
-    <link>http://example.org/posts/ajax/</link>
+    <link>http://songenen.github.io/posts/ajax/</link>
     <pubDate>Thu, 26 May 2022 01:01:39 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/ajax/</guid>
+    <guid>http://songenen.github.io/posts/ajax/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>NPM</title>
-    <link>http://example.org/posts/npm/</link>
+    <link>http://songenen.github.io/posts/npm/</link>
     <pubDate>Thu, 26 May 2022 01:00:30 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/npm/</guid>
+    <guid>http://songenen.github.io/posts/npm/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Nodejs</title>
-    <link>http://example.org/posts/nodejs/</link>
+    <link>http://songenen.github.io/posts/nodejs/</link>
     <pubDate>Thu, 26 May 2022 00:59:44 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://example.org/posts/nodejs/</guid>
+    <guid>http://songenen.github.io/posts/nodejs/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
