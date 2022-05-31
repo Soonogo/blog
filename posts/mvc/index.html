@@ -102,7 +102,7 @@
         <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">m</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span><span class="nx">data</span><span class="p">)</span><span class="c1">//用新数据替换旧数据
 </span><span class="c1"></span>        <span class="nx">eventBus</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">&#39;m:update&#39;</span><span class="p">)</span><span class="c1">//eventBus触发&#39;m:update&#39;信息，通知View刷新界面
 </span><span class="c1"></span>    <span class="p">},</span>
-    <span class="kr">get</span><span class="o">:</span><span class="p">{</span><span class="err">获取数据</span><span class="p">}</span>
+    <span class="nx">get</span><span class="o">:</span><span class="p">{</span><span class="err">获取数据</span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><ul>
 <li>视图view是它在屏幕上的表示，描绘的是model的当前状态。当模型的数据发生变化，视图相应地得到刷新自己的机会。</li>
@@ -182,7 +182,7 @@ eventBus.on('m:updated', () =&gt; { console.log('here') }) '监听事件，听
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">SongEn</a></span></div>
         </div>
     </footer></div>
