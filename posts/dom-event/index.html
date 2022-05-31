@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/songenen.github.io\/posts\/dom-event\/"
-        },"genre": "posts","wordcount":  2 ,
+        },"genre": "posts","wordcount":  154 ,
         "url": "http:\/\/songenen.github.io\/posts\/dom-event\/","datePublished": "2022-05-26T01:03:17+08:00","dateModified": "2022-05-26T01:03:17+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -75,15 +75,66 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">DOM Event</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>SongEn</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-05-26">2022-05-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;154 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><h1 id="dom-event">DOM Event</h1></div><div class="post-footer" id="post-footer">
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#链接httpsdevelopermozillaorgzh-cndocswebevents-dom-所有事件总览"><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events">链接</a> DOM 所有事件总览</a></li>
+        <li><a href="#etarget-vs-ecurrenttarget">e.target vs e.currentTarget</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#自定义dom-event">自定义DOM Event</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="dom-event">DOM Event</h1>
+<h3 id="链接httpsdevelopermozillaorgzh-cndocswebevents-dom-所有事件总览"><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events" target="_blank" rel="noopener noreffer">链接</a> DOM 所有事件总览</h3>
+<p>DOM 事件通过 addEventListener 添加
+默认是冒泡 通过第三个参数bool控制
+先捕获 后冒泡</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">div</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="nx">fn</span><span class="p">[,</span><span class="kc">true</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nx">默认</span>
+</span></span><span class="line"><span class="cl"><span class="nx">div</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,(</span><span class="nx">e</span><span class="p">)=&gt;{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">e</span> <span class="nx">只在事件阶段存在</span><span class="err">，</span><span class="nx">事件结束就消失</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><h3 id="etarget-vs-ecurrenttarget">e.target vs e.currentTarget</h3>
+<ul>
+<li>e.target 是点击的那个元素</li>
+<li>div &gt; span{文字}，用户点击文字</li>
+<li>e.target 是span</li>
+<li>e.currentTarget 是 div</li>
+</ul>
+<p>e.stopPropagation() 可用来阻止默认冒泡</p>
+<h1 id="imagepnghttpss2lolinet202205318ldjqfcjzpeh1vmpng"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s2.loli.net/2022/05/31/8ldJqFcjzPeH1Vm.png"
+        data-srcset="https://s2.loli.net/2022/05/31/8ldJqFcjzPeH1Vm.png, https://s2.loli.net/2022/05/31/8ldJqFcjzPeH1Vm.png 1.5x, https://s2.loli.net/2022/05/31/8ldJqFcjzPeH1Vm.png 2x"
+        data-sizes="auto"
+        alt="https://s2.loli.net/2022/05/31/8ldJqFcjzPeH1Vm.png"
+        title="image.png" /></h1>
+<h3 id="自定义dom-event">自定义DOM Event</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 添加一个适当的事件监听器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">obj</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;cat&#34;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="nx">process</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">)</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 创建并分发事件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">event</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CustomEvent</span><span class="p">(</span><span class="s2">&#34;cat&#34;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&#34;detail&#34;</span><span class="o">:</span><span class="p">{</span><span class="s2">&#34;hazcheeseburger&#34;</span><span class="o">:</span><span class="kc">true</span><span class="p">}})</span>
+</span></span><span class="line"><span class="cl"><span class="nx">obj</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
