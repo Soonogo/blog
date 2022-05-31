@@ -7,9 +7,10 @@
         <title>Git - Songen&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Git" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://songenen.github.io/posts/git/" />
+<meta property="og:url" content="http://songenen.github.io/posts/git/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-26T00:56:41+08:00" />
 <meta property="article:modified_time" content="2022-05-26T00:56:41+08:00" /><meta property="og:site_name" content="My blog" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Git"/>
 <meta name="twitter:description" content=""/>
@@ -82,56 +83,56 @@
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git 六行配置
-
-git config --global user.name 你的英文名
-git config --global user.email 你的邮箱
-git config --global push.default simple
-git config --global core.quotepath <span class="nb">false</span>
-git config --global core.editor <span class="s2">&#34;code --wait&#34;</span>
-git config --global core.autocrlf input
-
-git config --global --list
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">查看当前目录绝对路径   <span class="nb">pwd</span>
-查看当前目录内容   ls
-查看指定目录内容   ls路径
-查看文件内容
-cat路径（文件全部内容）  head路径（文件前xx行）   tail路径（文件后xx行）   less路径（实时滚动查看）
-head xxx.txt -n <span class="m">15</span> <span class="o">(</span>查看前15行<span class="o">)</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">创建目录 
-touch 1.txt
-<span class="nb">echo</span> hi &gt; 1.txt  一个&gt;是覆盖
-<span class="nb">echo</span> hihi &gt;&gt; 1.txt 两个是追加
-<span class="nb">echo</span> -e <span class="s2">&#34;1\n2&#34;</span> &gt; 1.txt
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir a
-mkdir -p a/b/c 递归创建
-touch 1.txt 2.txt
-mkdir a b
-rm 删除命令   rm -r删除文件
-移动和重命名 mv
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">git add.   和 git commit -v
-git config 
-git init 创建 .git    
-git add 选者要提交的内容
-gitignore 文件描述不可提交的内容
-git commit -v 用来提交
-git log 用来查看历史
-git reset --hard xxxxxx   切换版本查看
-git reflog 用来查看所有历史版本
-git merge 合并分支
-
-git branch  基于当前创建一个新的时间线 分支
-gir checkout 用于切换另一个分支
-git stash <span class="o">(</span>pop<span class="o">)</span>
-发现冲突 conflict 提示
-使用git status -sb 查看哪个/那些文件冲突
-
-git add/git commit/ <span class="o">[</span>git pull<span class="o">]</span> / git push 四连操作
-git clone 下载代码  /git pull 更新下载 / git push 上传
-git remote add origin git @xxxxxxx在本地添加远程仓库地址
-git push -u origin master 上传代码
-git push -u origin2 master 同时上传第二个代码
-</code></pre></div><p>git blame 相对路径  看代码当时写的时间</p>
+            </div><div class="content" id="content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git 六行配置
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git config --global user.name 你的英文名
+</span></span><span class="line"><span class="cl">git config --global user.email 你的邮箱
+</span></span><span class="line"><span class="cl">git config --global push.default simple
+</span></span><span class="line"><span class="cl">git config --global core.quotepath <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">git config --global core.editor <span class="s2">&#34;code --wait&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global core.autocrlf input
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git config --global --list
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">查看当前目录绝对路径   <span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">查看当前目录内容   ls
+</span></span><span class="line"><span class="cl">查看指定目录内容   ls路径
+</span></span><span class="line"><span class="cl">查看文件内容
+</span></span><span class="line"><span class="cl">cat路径（文件全部内容）  head路径（文件前xx行）   tail路径（文件后xx行）   less路径（实时滚动查看）
+</span></span><span class="line"><span class="cl">head xxx.txt -n <span class="m">15</span> <span class="o">(</span>查看前15行<span class="o">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">创建目录 
+</span></span><span class="line"><span class="cl">touch 1.txt
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> hi &gt; 1.txt  一个&gt;是覆盖
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> hihi &gt;&gt; 1.txt 两个是追加
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;1\n2&#34;</span> &gt; 1.txt
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir a
+</span></span><span class="line"><span class="cl">mkdir -p a/b/c 递归创建
+</span></span><span class="line"><span class="cl">touch 1.txt 2.txt
+</span></span><span class="line"><span class="cl">mkdir a b
+</span></span><span class="line"><span class="cl">rm 删除命令   rm -r删除文件
+</span></span><span class="line"><span class="cl">移动和重命名 mv
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git add.   和 git commit -v
+</span></span><span class="line"><span class="cl">git config 
+</span></span><span class="line"><span class="cl">git init 创建 .git    
+</span></span><span class="line"><span class="cl">git add 选者要提交的内容
+</span></span><span class="line"><span class="cl">gitignore 文件描述不可提交的内容
+</span></span><span class="line"><span class="cl">git commit -v 用来提交
+</span></span><span class="line"><span class="cl">git log 用来查看历史
+</span></span><span class="line"><span class="cl">git reset --hard xxxxxx   切换版本查看
+</span></span><span class="line"><span class="cl">git reflog 用来查看所有历史版本
+</span></span><span class="line"><span class="cl">git merge 合并分支
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git branch  基于当前创建一个新的时间线 分支
+</span></span><span class="line"><span class="cl">gir checkout 用于切换另一个分支
+</span></span><span class="line"><span class="cl">git stash <span class="o">(</span>pop<span class="o">)</span>
+</span></span><span class="line"><span class="cl">发现冲突 conflict 提示
+</span></span><span class="line"><span class="cl">使用git status -sb 查看哪个/那些文件冲突
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git add/git commit/ <span class="o">[</span>git pull<span class="o">]</span> / git push 四连操作
+</span></span><span class="line"><span class="cl">git clone 下载代码  /git pull 更新下载 / git push 上传
+</span></span><span class="line"><span class="cl">git remote add origin git @xxxxxxx在本地添加远程仓库地址
+</span></span><span class="line"><span class="cl">git push -u origin master 上传代码
+</span></span><span class="line"><span class="cl">git push -u origin2 master 同时上传第二个代码
+</span></span></code></pre></div><p>git blame 相对路径  看代码当时写的时间</p>
 <h1 id="imagepnghttpss2lolinet20220526srqokf7pvgjle93png"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -165,7 +166,7 @@ git push -u origin2 master 同时上传第二个代码
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">SongEn</a></span></div>
         </div>
     </footer></div>

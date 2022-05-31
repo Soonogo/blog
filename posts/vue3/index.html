@@ -7,9 +7,10 @@
         <title>Vue3 - Songen&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Vue3" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://songenen.github.io/posts/vue3/" />
+<meta property="og:url" content="http://songenen.github.io/posts/vue3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-26T01:04:13+08:00" />
 <meta property="article:modified_time" content="2022-05-26T01:04:13+08:00" /><meta property="og:site_name" content="My blog" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vue3"/>
 <meta name="twitter:description" content=""/>
@@ -105,7 +106,7 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><pre><code class="language-git" data-lang="git">Vite 命令
+            </div><div class="content" id="content"><pre tabindex="0"><code class="language-git" data-lang="git">Vite 命令
 $ npm init vite-app 
 $ yarn create vite-app 
 等价于
@@ -121,56 +122,56 @@ $ pnpm create vite &lt;project-name&gt; -- --template vue
 <li><code>setup</code> 函数中的第一个参数是 <code>props</code> 参数。<code>setup</code> 函数中的 <code>props</code> 是响应式的，当传入新的 prop 时，它将被更新。</li>
 <li>传递给 <code>setup</code> 函数的第二个参数是 <code>context</code>。<code>context</code> 是一个普通的 JavaScript 对象，它暴露三个组件 property。</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// MyBook.vue
-</span><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">setup</span><span class="p">(</span><span class="nx">props</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Attribute (响应式 object)
-</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">attrs</span><span class="p">)</span>
-    <span class="c1">// Slots (响应式 object)
-</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">slots</span><span class="p">)</span>
-    <span class="c1">// Emit 事件 (方法)
-</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">)</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><h2 id="ref">Ref()</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// MyBook.vue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setup</span><span class="p">(</span><span class="nx">props</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Attribute (响应式 object)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">attrs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Slots (响应式 object)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">slots</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Emit 事件 (方法)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="ref">Ref()</h2>
 <p><code>ref</code>是Composition API 引入的新概念。作用是使访问响应式的变量不依赖于实例的<code>this</code>。如果使用了<code>ref</code>，我们访问响应式的变量时使用<code>.value</code>而不是从<code>this</code>中获取,其底层是采用<code>reactive</code>方法实现。
 <code>ref</code> 会返回一个可变的响应式对象，该对象作为它的内部值——一个**响应式的引用*，这就是名称的来源。此对象只包含一个名为 <code>value</code> 的 property` ：</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">ref</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
-
-<span class="kr">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="c1">// 0
-</span><span class="c1"></span>
-<span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="o">++</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="c1">// 1
-</span></code></pre></div><h2 id="v-model文档httpsvue3jscndocszhguidemigrationv-modelhtml_3-x-e8afade6b395">v-model<a href="https://vue3js.cn/docs/zh/guide/migration/v-model.html#_3-x-%E8%AF%AD%E6%B3%95" target="_blank" rel="noopener noreffer">文档</a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">ref</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="c1">// 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="o">++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="c1">// 1
+</span></span></span></code></pre></div><h2 id="v-model文档httpsvue3jscndocszhguidemigrationv-modelhtml_3-x-e8afade6b395">v-model<a href="https://vue3js.cn/docs/zh/guide/migration/v-model.html#_3-x-%E8%AF%AD%E6%B3%95" target="_blank" rel="noopener noreffer">文档</a></h2>
 <p>在 3.x 中，自定义组件上的 <code>v-model</code> 相当于传递了 <code>modelValue</code> prop 并接收抛出的 <code>update:modelValue</code> 事件：</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">ChildComponent</span> <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">=</span><span class="s2">&#34;pageTitle&#34;</span> <span class="o">/&gt;</span>
-  
-<span class="c">&lt;!--</span> <span class="nx">简写</span><span class="o">:</span> <span class="o">--&gt;</span>
-  
-<span class="o">&lt;</span><span class="nx">ChildComponent</span>
-  <span class="o">:</span><span class="nx">modelValue</span><span class="o">=</span><span class="s2">&#34;pageTitle&#34;</span>
-  <span class="err">@</span><span class="nx">update</span><span class="o">:</span><span class="nx">modelValue</span><span class="o">=</span><span class="s2">&#34;pageTitle = $event&#34;</span>
-<span class="err">/&gt;</span>
-</code></pre></div><p>$event 的值是 emit 的第二个参数
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">ChildComponent</span> <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">=</span><span class="s2">&#34;pageTitle&#34;</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">简写</span><span class="o">:</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">ChildComponent</span>
+</span></span><span class="line"><span class="cl">  <span class="o">:</span><span class="nx">modelValue</span><span class="o">=</span><span class="s2">&#34;pageTitle&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="err">@</span><span class="nx">update</span><span class="o">:</span><span class="nx">modelValue</span><span class="o">=</span><span class="s2">&#34;pageTitle = $event&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">/&gt;</span>
+</span></span></code></pre></div><p>$event 的值是 emit 的第二个参数
 emit(事件名, 事件参数)</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">Switch</span> <span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y&#34;</span> <span class="err">@</span><span class="nx">update</span><span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y = $event&#34;</span><span class="o">/&gt;</span>
-<span class="nx">可以简写为</span>
-<span class="o">&lt;</span><span class="nx">Switch</span> <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y&#34;</span> <span class="o">/&gt;</span>
-  
-<span class="o">------------</span>
-
-  <span class="nx">setuop</span><span class="p">(</span><span class="nx">props</span><span class="p">,</span><span class="nx">context</span><span class="p">){</span>
-  	<span class="kr">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;init&#39;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="p">{</span><span class="nx">toggle</span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><h2 id="vue-3-属性绑定">Vue 3 属性绑定</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">Switch</span> <span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y&#34;</span> <span class="err">@</span><span class="nx">update</span><span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y = $event&#34;</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">可以简写为</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">Switch</span> <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y&#34;</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="o">------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">setuop</span><span class="p">(</span><span class="nx">props</span><span class="p">,</span><span class="nx">context</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  	<span class="kr">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;init&#39;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span><span class="nx">toggle</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="vue-3-属性绑定">Vue 3 属性绑定</h2>
 <p>默认所有属性都绑定到根元素
 使用 inheritAttrs: false 可以取消默认绑定
 使用 $attrs 或者 context.attrs 获取所有属性
-使用 v-bind=&quot;$attrs&rdquo; 批量绑定属性
+使用 v-bind=&quot;$attrs&quot; 批量绑定属性
 使用 const {yyy, xxx, &hellip;rest} = context.attrs 将属性分开 </p>
 <h4 id="props-vs-attrs">props V.S. attrs </h4>
 <p>props 要先声明才能取值，attrs 不用先声明
@@ -178,20 +179,20 @@ props 不包含事件，attrs 包含
 props 没有声明的属性，会跑到 attrs 里
 props 支持 string 以外的类型，attrs 只有 string 类型 </p>
 <h4 id="onmount-和-onupdate-可以用-watcheffect代替">onMount 和 onUpdate 可以用 watchEffect代替</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="nx">watchEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="p">))</span>
-<span class="c1">// -&gt; logs 0
-</span><span class="c1"></span><span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="o">++</span>
-  <span class="c1">// -&gt; logs 1
-</span><span class="c1"></span><span class="p">},</span> <span class="mi">100</span><span class="p">)</span>
-</code></pre></div><h4 id="如果在onmounted之前不更新可以用onmounted套起来">如果在onMounted之前不更新可以用onMounted套起来</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">onMounted</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">watchEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// access the DOM or template refs
-</span><span class="c1"></span>  <span class="p">})</span>
-<span class="p">})</span>
-</code></pre></div><h2 id="vue-2-和-vue-3-的小区别">Vue 2 和 Vue 3 的小区别 </h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">watchEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// -&gt; logs 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">count</span><span class="p">.</span><span class="nx">value</span><span class="o">++</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// -&gt; logs 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">},</span> <span class="mi">100</span><span class="p">)</span>
+</span></span></code></pre></div><h4 id="如果在onmounted之前不更新可以用onmounted套起来">如果在onMounted之前不更新可以用onMounted套起来</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">onMounted</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">watchEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// access the DOM or template refs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><h2 id="vue-2-和-vue-3-的小区别">Vue 2 和 Vue 3 的小区别 </h2>
 <ul>
 <li>Vue 3 的 Template 支持多个根标签，Vue 2 不支持</li>
 <li>Vue 3 有 createApp()，而 Vue 2 的是 new Vue()</li>
@@ -203,54 +204,54 @@ props 支持 string 以外的类型，attrs 只有 string 类型 </p>
 <p>Props</p>
 </blockquote>
 <h4 id="子组件想要修改自身的值不应该自己修改应该通过事件触发给父组件让父组件来修改">子组件想要修改自身的值不应该自己修改，应该通过事件触发给父组件让父组件来修改。</h4>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//父组件
-</span><span class="c1"></span>
-<span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">Switch</span> <span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y&#34;</span>  <span class="err">@</span><span class="nx">input</span><span class="o">=</span><span class="s2">&#34; y = value &#34;</span><span class="o">/&gt;</span>
-      
-      <span class="o">&lt;</span><span class="nx">Switch</span> <span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y&#34;</span>  <span class="err">@</span><span class="nx">update</span><span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34; y = value &#34;</span><span class="o">/&gt;</span>
-      <span class="c1">//可以简写为
-</span><span class="c1"></span>       <span class="o">&lt;</span><span class="nx">Switch</span> <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y&#34;</span><span class="o">/&gt;</span>
-      
-  <span class="o">&lt;</span><span class="err">/div&gt;</span>
-<span class="o">&lt;</span><span class="err">/template&gt;</span>
-<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span> <span class="o">&gt;</span>
-<span class="kr">import</span> <span class="nx">Switch</span> <span class="nx">from</span> <span class="s1">&#39;../lib/Switch1.vue&#39;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">ref</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span><span class="nx">Switch</span><span class="p">},</span>
-  <span class="nx">setup</span><span class="p">(){</span>
-    <span class="kr">const</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">{</span><span class="nx">y</span><span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span> 
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//子组件
-</span><span class="c1"></span>
-<span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="nx">button</span> <span class="err">@</span><span class="nx">click</span><span class="o">=</span><span class="s2">&#34;toggle&#34;</span> <span class="o">:</span><span class="kr">class</span><span class="o">=</span><span class="s2">&#34;{checked:value}&#34;</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;&lt;</span><span class="err">/span&gt; &lt;/button&gt;</span>
-<span class="o">&lt;</span><span class="err">/template&gt;</span>
-<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span><span class="o">&gt;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">ref</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">value</span><span class="o">:</span> <span class="nb">Boolean</span>
-  <span class="p">},</span>
-  <span class="nx">setup</span><span class="p">(</span><span class="nx">props</span><span class="p">,</span> <span class="nx">context</span><span class="p">){</span>
-    <span class="kr">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="p">()=&gt;{</span>
-      <span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
-     
-      <span class="nx">父组件改写为v</span><span class="o">-</span><span class="nx">model写法后</span> <span class="nx">emit触发事件必须为update</span><span class="o">:</span> <span class="o">+</span> <span class="nx">props</span>
-      <span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;update:value&#39;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
-      
-      <span class="c1">// this.$emit()
-</span><span class="c1"></span>    <span class="p">}</span>
-    <span class="k">return</span> <span class="p">{</span><span class="nx">toggle</span><span class="p">}</span>
-  <span class="p">}</span> 
-<span class="p">}</span>
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">//父组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">Switch</span> <span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y&#34;</span>  <span class="err">@</span><span class="nx">input</span><span class="o">=</span><span class="s2">&#34; y = value &#34;</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">Switch</span> <span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y&#34;</span>  <span class="err">@</span><span class="nx">update</span><span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34; y = value &#34;</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">//可以简写为
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>       <span class="o">&lt;</span><span class="nx">Switch</span> <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&#34;y&#34;</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/template&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span> <span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Switch</span> <span class="nx">from</span> <span class="s1">&#39;../lib/Switch1.vue&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">ref</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span><span class="nx">Switch</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setup</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">ref</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span><span class="nx">y</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">//子组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">button</span> <span class="err">@</span><span class="nx">click</span><span class="o">=</span><span class="s2">&#34;toggle&#34;</span> <span class="o">:</span><span class="kr">class</span><span class="o">=</span><span class="s2">&#34;{checked:value}&#34;</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;&lt;</span><span class="err">/span&gt; &lt;/button&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/template&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">ref</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">value</span><span class="o">:</span> <span class="nb">Boolean</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setup</span><span class="p">(</span><span class="nx">props</span><span class="p">,</span> <span class="nx">context</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="p">()=&gt;{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">      <span class="nx">父组件改写为v</span><span class="o">-</span><span class="nx">model写法后</span> <span class="nx">emit触发事件必须为update</span><span class="o">:</span> <span class="o">+</span> <span class="nx">props</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;update:value&#39;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="c1">// this.$emit()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span><span class="nx">toggle</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></span></code></pre></div><blockquote>
 <p>配合TS</p>
 </blockquote>
 <h2 id="typescript-好处">TypeScript 好处</h2>
@@ -260,19 +261,19 @@ props 支持 string 以外的类型，attrs 只有 string 类型 </p>
 <li>类型检查：无法点出错误的属性</li>
 </ol>
 <h3 id="1js对象">1.JS对象</h3>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span><span class="nx">data</span> <span class="p">,</span> <span class="nx">props</span> <span class="p">,</span> <span class="nx">methods</span> <span class="p">,</span> <span class="nx">created</span> <span class="p">,</span> <span class="p">...}</span>
-</code></pre></div><h3 id="2ts-类--script-langts">2.TS 类  <!-- raw HTML omitted --></h3>
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Component</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">XXX</span> <span class="kr">extends</span> <span class="nx">Vue</span> <span class="p">{</span> 
-     <span class="nx">xxx</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s2">&#34;hi&#34;</span>
-     <span class="kd">@Props</span><span class="p">(</span><span class="nb">Number</span><span class="p">)</span> <span class="nx">xxx</span>: <span class="kt">number</span> <span class="o">|</span> <span class="kc">undefined</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="3js-类--script-langjs">3.JS 类  <!-- raw HTML omitted --></h3>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">XXX</span> <span class="kr">extends</span> <span class="nx">Vue</span> <span class="p">{</span> 
-     <span class="nx">xxx</span> <span class="o">=</span> <span class="s2">&#34;hi&#34;</span>
-<span class="p">}</span>
-</code></pre></div></div><div class="post-footer" id="post-footer">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span><span class="nx">data</span> <span class="p">,</span> <span class="nx">props</span> <span class="p">,</span> <span class="nx">methods</span> <span class="p">,</span> <span class="nx">created</span> <span class="p">,</span> <span class="p">...}</span>
+</span></span></code></pre></div><h3 id="2ts-类--script-langts">2.TS 类  <!-- raw HTML omitted --></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kd">@Component</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">XXX</span> <span class="kr">extends</span> <span class="nx">Vue</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">     <span class="nx">xxx</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s2">&#34;hi&#34;</span>
+</span></span><span class="line"><span class="cl">     <span class="kd">@Props</span><span class="p">(</span><span class="nb">Number</span><span class="p">)</span> <span class="nx">xxx</span>: <span class="kt">number</span> <span class="o">|</span> <span class="kc">undefined</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="3js-类--script-langjs">3.JS 类  <!-- raw HTML omitted --></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="err">@</span><span class="nx">Component</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">XXX</span> <span class="kr">extends</span> <span class="nx">Vue</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">     <span class="nx">xxx</span> <span class="o">=</span> <span class="s2">&#34;hi&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -298,7 +299,7 @@ props 支持 string 以外的类型，attrs 只有 string 类型 </p>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">SongEn</a></span></div>
         </div>
     </footer></div>

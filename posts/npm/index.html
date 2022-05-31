@@ -7,9 +7,10 @@
         <title>NPM - Songen&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="NPM" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://songenen.github.io/posts/npm/" />
+<meta property="og:url" content="http://songenen.github.io/posts/npm/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-26T01:00:30+08:00" />
 <meta property="article:modified_time" content="2022-05-26T01:00:30+08:00" /><meta property="og:site_name" content="My blog" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="NPM"/>
 <meta name="twitter:description" content=""/>
@@ -90,39 +91,38 @@
 </nav></div>
             </div><div class="content" id="content"><h2 id="查看-npm-全局安装过的包">查看 npm 全局安装过的包</h2>
 <p>–depth 表示深度，我们使用的模块会有依赖，深度为零的时候，不会显示依赖模块</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span> <span class="nx">npm</span> <span class="nx">list</span> <span class="o">--</span><span class="nx">depth</span><span class="o">=</span><span class="mi">0</span> <span class="o">--</span><span class="nx">global</span>
-
-<span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Songen</span><span class="err">\</span><span class="nx">AppData</span><span class="err">\</span><span class="nx">Roaming</span><span class="err">\</span><span class="nx">npm</span>
-<span class="o">+--</span> <span class="err">@</span><span class="nx">vue</span><span class="o">/</span><span class="nx">cli</span><span class="err">@</span><span class="mf">4.4.6</span>
-<span class="o">+--</span> <span class="nx">http</span><span class="o">-</span><span class="nx">server</span><span class="err">@</span><span class="mf">0.12.3</span>
-<span class="o">+--</span> <span class="nx">node</span><span class="o">-</span><span class="nx">dev</span><span class="err">@</span><span class="mf">5.0.0</span>
-<span class="sb">`-- nrm@1.2.1
-</span></code></pre></div><h2 id="查看-yarn-全局安装过的包">查看 yarn 全局安装过的包</h2>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span> <span class="nx">yarn</span> <span class="nx">global</span> <span class="nx">list</span> <span class="o">--</span><span class="nx">depth</span><span class="o">=</span><span class="mi">0</span>
-
-<span class="nx">yarn</span> <span class="nx">global</span> <span class="nx">v1</span><span class="mf">.22.5</span>
-<span class="nx">info</span> <span class="s2">&#34;create-react-app@3.4.1&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
-   <span class="o">-</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span>
-<span class="nx">info</span> <span class="s2">&#34;http-server@0.12.3&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
-   <span class="o">-</span> <span class="nx">http</span><span class="o">-</span><span class="nx">server</span>
-   <span class="o">-</span> <span class="nx">hs</span>
-<span class="nx">info</span> <span class="s2">&#34;parcel@1.12.4&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
-   <span class="o">-</span> <span class="nx">parcel</span>
-<span class="nx">info</span> <span class="s2">&#34;serve@11.3.2&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
-   <span class="o">-</span> <span class="nx">serve</span>
-<span class="nx">info</span> <span class="s2">&#34;tldr@3.3.2&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
-   <span class="o">-</span> <span class="nx">tldr</span>
-<span class="nx">info</span> <span class="s2">&#34;yrm@1.0.6&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
-   <span class="o">-</span> <span class="nx">yrm</span>
-</code></pre></div><h2 id="npx">npx </h2>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span> <span class="nx">npx</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span> <span class="nx">my</span><span class="o">-</span><span class="nx">app</span>
-
- <span class="nx">这条命令</span> <span class="nx">npx</span> <span class="nx">会按以下顺序工作</span><span class="err">：</span>
- <span class="mf">1.</span> <span class="nx">先查看当前项目有没</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span>
- <span class="mf">2.</span> <span class="nx">如果当前项目找不到</span><span class="err">，</span><span class="nx">会去全局查找</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span>
- <span class="mf">3.</span> <span class="nx">如果全局还找不到</span><span class="err">，</span><span class="nx">会帮我们临时从</span> <span class="nx">npm</span> <span class="nx">包仓库安装</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span><span class="err">，</span><span class="nx">不会污染到当前项目</span><span class="err">，</span><span class="nx">也不会装到全局</span>
-
-</code></pre></div><p>在window下可能有bug，文档目录有空格等会导致失败</p></div><div class="post-footer" id="post-footer">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">$</span> <span class="nx">npm</span> <span class="nx">list</span> <span class="o">--</span><span class="nx">depth</span><span class="o">=</span><span class="mi">0</span> <span class="o">--</span><span class="nx">global</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Songen</span><span class="err">\</span><span class="nx">AppData</span><span class="err">\</span><span class="nx">Roaming</span><span class="err">\</span><span class="nx">npm</span>
+</span></span><span class="line"><span class="cl"><span class="o">+--</span> <span class="err">@</span><span class="nx">vue</span><span class="o">/</span><span class="nx">cli</span><span class="err">@</span><span class="mf">4.4</span><span class="p">.</span><span class="mi">6</span>
+</span></span><span class="line"><span class="cl"><span class="o">+--</span> <span class="nx">http</span><span class="o">-</span><span class="nx">server</span><span class="err">@</span><span class="mf">0.12</span><span class="p">.</span><span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="o">+--</span> <span class="nx">node</span><span class="o">-</span><span class="nx">dev</span><span class="err">@</span><span class="mf">5.0</span><span class="p">.</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="sb">`-- nrm@1.2.1
+</span></span></span></code></pre></div><h2 id="查看-yarn-全局安装过的包">查看 yarn 全局安装过的包</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">$</span> <span class="nx">yarn</span> <span class="nx">global</span> <span class="nx">list</span> <span class="o">--</span><span class="nx">depth</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">yarn</span> <span class="nx">global</span> <span class="nx">v1</span><span class="p">.</span><span class="mf">22.5</span>
+</span></span><span class="line"><span class="cl"><span class="nx">info</span> <span class="s2">&#34;create-react-app@3.4.1&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="o">-</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span>
+</span></span><span class="line"><span class="cl"><span class="nx">info</span> <span class="s2">&#34;http-server@0.12.3&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="o">-</span> <span class="nx">http</span><span class="o">-</span><span class="nx">server</span>
+</span></span><span class="line"><span class="cl">   <span class="o">-</span> <span class="nx">hs</span>
+</span></span><span class="line"><span class="cl"><span class="nx">info</span> <span class="s2">&#34;parcel@1.12.4&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="o">-</span> <span class="nx">parcel</span>
+</span></span><span class="line"><span class="cl"><span class="nx">info</span> <span class="s2">&#34;serve@11.3.2&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="o">-</span> <span class="nx">serve</span>
+</span></span><span class="line"><span class="cl"><span class="nx">info</span> <span class="s2">&#34;tldr@3.3.2&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="o">-</span> <span class="nx">tldr</span>
+</span></span><span class="line"><span class="cl"><span class="nx">info</span> <span class="s2">&#34;yrm@1.0.6&#34;</span> <span class="nx">has</span> <span class="nx">binaries</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">   <span class="o">-</span> <span class="nx">yrm</span>
+</span></span></code></pre></div><h2 id="npx">npx </h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">$</span> <span class="nx">npx</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span> <span class="nx">my</span><span class="o">-</span><span class="nx">app</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="nx">这条命令</span> <span class="nx">npx</span> <span class="nx">会按以下顺序工作</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl"> <span class="mf">1.</span> <span class="nx">先查看当前项目有没</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span>
+</span></span><span class="line"><span class="cl"> <span class="mf">2.</span> <span class="nx">如果当前项目找不到</span><span class="err">，</span><span class="nx">会去全局查找</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span>
+</span></span><span class="line"><span class="cl"> <span class="mf">3.</span> <span class="nx">如果全局还找不到</span><span class="err">，</span><span class="nx">会帮我们临时从</span> <span class="nx">npm</span> <span class="nx">包仓库安装</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span><span class="err">，</span><span class="nx">不会污染到当前项目</span><span class="err">，</span><span class="nx">也不会装到全局</span>
+</span></span></code></pre></div><p>在window下可能有bug，文档目录有空格等会导致失败</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -148,7 +148,7 @@
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">SongEn</a></span></div>
         </div>
     </footer></div>

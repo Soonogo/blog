@@ -7,9 +7,10 @@
         <title>Vue3.2 - Songen&#39;s Blog</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Vue3.2" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://songenen.github.io/posts/vue3.2/" />
+<meta property="og:url" content="http://songenen.github.io/posts/vue3.2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-26T01:05:12+08:00" />
 <meta property="article:modified_time" content="2022-05-26T01:05:12+08:00" /><meta property="og:site_name" content="My blog" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vue3.2"/>
 <meta name="twitter:description" content=""/>
@@ -105,41 +106,40 @@
 <li>不要结构props。结构的props会失去响应性。</li>
 </ul>
 <p>2.<strong>「context」</strong> 第二个参数提供了一个上下文对象，选择性地暴露了一些 property。</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span><span class="o">&gt;</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span><span class="nx">value</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,},</span>
-  <span class="nx">setup</span><span class="p">(</span><span class="nx">props</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;update:value&#34;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
-      <span class="c1">// this.$emit()
-</span><span class="c1"></span>    <span class="p">};</span>
-    <span class="k">return</span> <span class="p">{</span> <span class="nx">toggle</span> <span class="p">};</span>
-  <span class="p">},</span>
-<span class="p">};</span>
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
-
-<span class="c1">//简写为以下写法
-</span><span class="c1"></span>
-<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span> <span class="nx">setup</span><span class="o">&gt;</span>
-    <span class="kr">const</span> <span class="nx">props</span> <span class="o">=</span> <span class="nx">defineProps</span><span class="p">({</span><span class="nx">value</span><span class="o">:</span> <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,},});</span>
-    <span class="kr">const</span> <span class="nx">emit</span> <span class="o">=</span> <span class="nx">defineEmits</span><span class="p">([</span><span class="s1">&#39;update:value&#39;</span><span class="p">]);</span>
-    <span class="kr">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="p">()=&gt;{</span>
-      <span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;update:value&#39;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
-      <span class="c1">// this.$emit()
-</span><span class="c1"></span>    <span class="p">}</span>
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
-
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">setup</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span><span class="o">&gt;</span>
-<span class="kr">import</span> <span class="nx">Tab</span> <span class="nx">from</span> <span class="s2">&#34;./tab.vue&#34;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">useSlots</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
-<span class="kr">const</span> <span class="nx">slots</span> <span class="o">=</span> <span class="nx">useSlots</span><span class="p">().</span><span class="k">default</span><span class="p">()</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">type</span> <span class="o">===</span><span class="nx">Tab</span> <span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">type</span> <span class="o">===</span><span class="nx">Tab</span> <span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">type</span> <span class="o">===</span><span class="nx">Tab</span> <span class="p">)</span>
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div><p><code>useSlots</code> 和<code>useAttrs</code> 是实际的运行时函数，返回<code> setupContext.slots</code> 和 <code>setupContext.attrs</code> 的等价物。它们也可以在正常的组合 API 函数中使用。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span><span class="nx">value</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setup</span><span class="p">(</span><span class="nx">props</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">context</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&#34;update:value&#34;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// this.$emit()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span> <span class="nx">toggle</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//简写为以下写法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span> <span class="nx">setup</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">props</span> <span class="o">=</span> <span class="nx">defineProps</span><span class="p">({</span><span class="nx">value</span><span class="o">:</span> <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,},});</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">emit</span> <span class="o">=</span> <span class="nx">defineEmits</span><span class="p">([</span><span class="s1">&#39;update:value&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="p">()=&gt;{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;update:value&#39;</span><span class="p">,</span> <span class="o">!</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// this.$emit()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">setup</span> <span class="nx">lang</span><span class="o">=</span><span class="s2">&#34;ts&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Tab</span> <span class="nx">from</span> <span class="s2">&#34;./tab.vue&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useSlots</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">slots</span> <span class="o">=</span> <span class="nx">useSlots</span><span class="p">().</span><span class="k">default</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">type</span> <span class="o">===</span><span class="nx">Tab</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">type</span> <span class="o">===</span><span class="nx">Tab</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slots</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">type</span> <span class="o">===</span><span class="nx">Tab</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></span></code></pre></div><p><code>useSlots</code> 和<code>useAttrs</code> 是实际的运行时函数，返回<code> setupContext.slots</code> 和 <code>setupContext.attrs</code> 的等价物。它们也可以在正常的组合 API 函数中使用。</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -260,7 +260,7 @@ hook 抽离：尽可能将逻辑抽离，并不一定要进行复用。</p>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.74.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">SongEn</a></span></div>
         </div>
     </footer></div>
