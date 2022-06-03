@@ -2,12 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://songenen.github.io/posts/</loc><lastmod>2022-05-26T01:26:40&#43;08:00</lastmod></url><url>
-            <loc>http://songenen.github.io/</loc><lastmod>2022-05-26T01:26:40&#43;08:00</lastmod></url><url>
+            <loc>http://songenen.github.io/posts/</loc><lastmod>2022-06-03T17:26:02&#43;08:00</lastmod></url><url>
+            <loc>http://songenen.github.io/</loc><lastmod>2022-06-03T17:26:02&#43;08:00</lastmod></url><url>
             <loc>http://songenen.github.io/posts/vite-pnpm/</loc><lastmod>2022-05-26T01:26:40&#43;08:00</lastmod></url><url>
             <loc>http://songenen.github.io/posts/react-hooks/</loc><lastmod>2022-05-26T01:23:57&#43;08:00</lastmod></url><url>
             <loc>http://songenen.github.io/posts/react/</loc><lastmod>2022-05-26T01:13:57&#43;08:00</lastmod></url><url>
             <loc>http://songenen.github.io/posts/typescript/</loc><lastmod>2022-05-26T01:10:39&#43;08:00</lastmod></url><url>
+            <loc>http://songenen.github.io/posts/promise/</loc><lastmod>2022-06-03T17:26:02&#43;08:00</lastmod></url><url>
             <loc>http://songenen.github.io/posts/vue3.2/</loc><lastmod>2022-05-26T01:05:12&#43;08:00</lastmod></url><url>
             <loc>http://songenen.github.io/posts/vue3/</loc><lastmod>2022-05-26T01:04:13&#43;08:00</lastmod></url><url>
             <loc>http://songenen.github.io/posts/dom-event/</loc><lastmod>2022-05-26T01:03:17&#43;08:00</lastmod></url><url>
